@@ -24,27 +24,12 @@ To create an environment free of interferences and 100% compatible with the tool
 + pip3 install requests
 + pip3 install jupyter
 + pip3 install gensim
++	pip3 install Cython --install-option="--no-cython-compile"
++	pip3 install fasttext
+4. Run the rdlsc_app.py 
+5. Open your browser and go to http://127.0.0.1:8080
 
-10. https://pypi.python.org/pypi/fasttext
-The. https://pypi.python.org/pypi/Cython/
-B. pip3 install Cython --install-option = "- no-cython-compile"
-w. pip3 install fasttext
 
-jupyter notebook --no-browser --allow-root --ip = 192.168.20.213 --NotebookApp.token =
-
-rdlsc-mestrado.ddns.net:8016
-
-1. InstallSetting up Python:
-  + We use anaconda by continuum.io (see [Why?](https://www.continuum.io/why-anaconda))
-    - We won't need the entire distribution. [Download](http://conda.pydata.org/miniconda.html) a Python 2.7 version & install a minimal version of anaconda.
-  + Make sure you select add to PATH during install.
-  + Next, run `setup.bat`. This will install all the dependencies needed to run the tool.
-  + If the above does not work well. Remember you only need a Python 2.7 and three packages listed in `requirements.txt` installed. So `pip install -r requirements.txt` will work.
-
-2. Running script:
-  + Navigate to *src* and run `index.py`.
-  + If all is well, you'll be greeted by this:
-  ![](https://github.com/fastread/src/blob/master/tutorial/screenshots/run.png?raw=yes)
 
 3. The Interface:
   + Fire up your browser and go to [`http://localhost:5000/hello/`](http://localhost:5000/hello/). You'll see a page like below:
