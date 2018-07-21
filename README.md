@@ -14,16 +14,16 @@ To create an environment free of interferences and 100% compatible with the tool
 1. Install Virtual Box 
 2. Install Ubuntu Desktop
 3. Install the necessary packages:
-3.1  apt-get install python-pip
-3.2 apt-get install git
-* apt-get install python3-pip
-* pip3 install git+https://github.com/webpy/webpy#egg=web.py
-*. pip3 install sklearn
-*. pip3 install numpy
-*. pip3 install scipy
-i. pip3 install requests
-j. pip3 install jupyter
-k. pip3 install gensim
++ apt-get install python-pip
++ apt-get install git
++ apt-get install python3-pip
++ pip3 install git+https://github.com/webpy/webpy#egg=web.py
++ pip3 install sklearn
++ pip3 install numpy
++ pip3 install scipy
++ pip3 install requests
++ pip3 install jupyter
++ pip3 install gensim
 
 10. https://pypi.python.org/pypi/fasttext
 The. https://pypi.python.org/pypi/Cython/
