@@ -30,7 +30,7 @@ To create an environment free of interferences and 100% compatible with the tool
 5. Open your browser and go to http://127.0.0.1:8080
 
 You'll see a page like below:
-  ![](https://github.com/leocairos/MastersResearch/screenshots/tool_index.png?raw=yes)
+  ![](https://github.com/leocairos/MastersResearch/tree/master/screenshots/tool_index.png?raw=yes)
     
 Use Tool
 -----
