@@ -29,11 +29,8 @@ To create an environment free of interferences and 100% compatible with the tool
 4. Run the rdlsc_app.py 
 5. Open your browser and go to http://127.0.0.1:8080
 
-
-
-3. The Interface:
-  + Fire up your browser and go to [`http://localhost:5000/hello/`](http://localhost:5000/hello/). You'll see a page like below:
-  ![](https://github.com/fastread/src/blob/master/tutorial/screenshots/start.png?raw=yes)
+You'll see a page like below:
+  ![](https://github.com/leocairos/MastersResearch/screenshots/tool_index.png?raw=yes)
     
 Use Tool
 -----
