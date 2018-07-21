@@ -9,9 +9,13 @@ $if msg!='':
 <form name="newResearch" action="/" method="POST" onsubmit="return validate(this)"> 
 	<p align="Right"> 
 		<input type="text" name="nameNewResearch" placeholder="Type the name of the new research..." style="width: 300px;"/> 
-			
+		
+		<!--
 		<input type="radio" name="repositoryNewResearch" value="IEEE" />IEEE
 		<input type="radio" name="repositoryNewResearch" value="Scopus" checked="true"/>Scopus
+		-->
+		<input type="hidden" id="repositoryNewResearch" name="repositoryNewResearch" value="Scopus" />
+	
 		
 		<input type="submit" value="create new research">
 	</p>
