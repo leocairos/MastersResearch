@@ -1,26 +1,13 @@
-What is FASTREAD?
+Masters Research
 -----
-FASTREAD is a tool to support primary study selection in systematic literature review.
+This repository contains the files of the tool developed during academic master's project.
 
 Latest Versions:
 
-- On Github repo: [https://github.com/fastread/src](https://github.com/fastread/src).
-- In the Seacraft repository: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.852663.svg)](https://doi.org/10.5281/zenodo.852663)
+- On Github repo: [https://github.com/leocairos/MastersResearch](https://github.com/leocairos/MastersResearch).
 
-Cite as:
-``` 
-@misc{zhe_yu_2017_837861,
-  author       = {Zhe Yu and
-                  Tim Menzies},
-  title        = {fastread/src: Core Algorithm Update},
-  month        = aug,
-  year         = 2017,
-  doi          = {10.5281/zenodo.837861},
-  url          = {https://doi.org/10.5281/zenodo.837861}
-}
-```
 
-Setting up FASTREAD
+Setting up
 -----
 
 1. Setting up Python:
@@ -39,7 +26,7 @@ Setting up FASTREAD
   + Fire up your browser and go to [`http://localhost:5000/hello/`](http://localhost:5000/hello/). You'll see a page like below:
   ![](https://github.com/fastread/src/blob/master/tutorial/screenshots/start.png?raw=yes)
     
-Use FASTREAD
+Use Tool
 -----
 
 1. Get data ready:
