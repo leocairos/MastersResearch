@@ -1,4 +1,4 @@
-Masters Research
+Tool - Masters Research
 -----
 This repository contains the files of the tool developed during academic master's project.
 
