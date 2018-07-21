@@ -1,0 +1,133 @@
+$def with (search, docs, research, msg)
+<script type="text/javascript">
+window.onload = function(){
+	//getWordsSimilar();	
+}
+</script>
+
+$if msg!='':
+	<div class="alert">
+	  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+	  $msg
+	</div>
+
+<table style="width: auto; border-spacing: 0em 0em; margin: 0em 0em">
+	<tr>
+		<td style="border-width: 0px 0px; padding: 0em; background-color: #FFFFFF;"> <h3>Research: <i>$research.name <small>(in $research.repository)</small></i> &nbsp; </h3> </td>
+		<td style="border-width: 0px 0px; padding: 0em; background-color: #FFFFFF;"> <a href="/" > <small> [Back to researchs]</small> </a> </td>
+	</tr>
+</table>
+
+<form name="search" action="/slr" method="POST" id="search">	
+	<b>Search String:</b> <input type="text" style="width: 79%;" id="searchString" name="searchString" value="$search.searchString" autocomplete="on">
+    <input type="submit" value="new search"/>	
+	<input type="hidden" id="idResearch" name="idResearch" value="$research.id"/>		
+	<input type="hidden" id="idSearch" name="idSearch" value="$search.id"/>		
+
+$if search.searchString!='':
+	<p><b>Current search string:</b> <i>[$search.searchString]</i> 	
+	</p>
+	<div class="tooltip">
+		<b>$("{0:12,.0f}".format(float(search.amountResults))) document(s) found(s)</b>
+		<span class="tooltiptext">Algorithm processing limited to 1,000 documents</span>		
+	</div>	
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<div class="tooltip"><small> [TF-IDF]</small> 
+	<span class="tooltiptext">
+		TF-IDF, short for term frequency-inverse document frequency, is a numerical statistic that is
+		intended to reflect how important a word is to a document in a collection.</span>
+	</div>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<div class="tooltip"><small> <a href="javascript:getWordsSimilar()" style="display: none1;" />
+			[SkipGram vs CBOW] </a> </small>
+		<span class="tooltiptext"> CBOW: predicting the word given its context.
+		</br> SkipGram: predicting the context given a word.
+		</br> >>Click to process<< </span> 
+	</div>
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<div class="tooltip"><small> <a href="javascript:generateLogAnalyse()" style="display: none1;" />
+			[generateLogAnalyse] </a> </small>
+		<span class="tooltiptext"> Generate log for analysis
+		</br> >>Click to generate<< </span> 
+	</div>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<!-- <small><a href="javascript:getWordsSimilar()" style="display: none1;" />Get Similar</a></small> -->
+			
+<!-- CBOW: "predicting the word given its context" / Skip-gram: "predicting the context given a word" -->
+<br>
+<div id="div_words">
+	<!--- &nbsp; Processing the list of featured terms... 
+	<small><a href="javascript:getWordsSimilar()" style="display: none1;" />Get Similar</a></small> 
+	&nbsp;&nbsp;<a href="javascript:getWordsSimilar()" style="display: none1;" />Get Similar</a> -->
+</div>
+
+<div id="div_tfIDF">
+$if len(docs)>0:
+	$if len(search.tfIdfNone)>0:		
+		<p><b>TF-IDF ($("{0:12,.0f}".format(float(search.amountNone))) None(s)): </b>						
+		$for t in search.tfIdfNone:
+			<span class="word-tfIDF"><b> <a href="javascript:updInput('','$t[0]')"> $t[0] $("{0:12,.3f}".format(float(t[1])))</a></span>&nbsp;
+		</p>
+	$if len(search.tfIdfInclude)>0:
+		<p><b>TF-IDF ($("{0:12,.0f}".format(float(search.amountInclude))) Include(s)): </b>
+		$for t in search.tfIdfInclude:
+			<span class="word-tfIDF"><b> <a href="javascript:updInput('', '$t[0]')"> $t[0] $("{0:12,.3f}".format(float(t[1])))</a></span>&nbsp;
+		</p>
+	$if len(search.tfIdfExclude)>0:
+		<p><b>TF-IDF ($("{0:12,.0f}".format(float(search.amountExclude))) Exclude(s)): </b>
+		$for t in search.tfIdfExclude:
+			<span class="word-tfIDF"><b> <a href="javascript:updInput('NOT','$t[0]')"> $t[0] $("{0:12,.3f}".format(float(t[1])))</a></span>&nbsp;
+		</p>
+</div>
+
+<div id="tableSimple" style="display: none">	
+	<table>
+		<tr>
+			<td style="border-width: 0px 0px">
+				<b>Search in:</b> 					
+					<input type="radio" name="searchIn" value="md" $("checked='true'" if search.searchIn=='md' else '') />metadata fields and abstract
+					<input type="radio" name="searchIn" value="querytext" $("checked='true'" if search.searchIn!='md' else '') />metadata fields, abstract and document text
+			</td>		
+			
+		</tr>				
+	</table>
+</div>	
+
+$if len(docs)>0:	
+	<table id="tbDocs" border="1">
+	<thead><tr><th>Documents</th><th width='230px'>Classification</th><th></th></tr></thead>
+	<tbody>
+		$for doc in docs:	
+			<tr id="$doc.id" class="entry">
+				<td>
+					<!--<input type="radio" name="paper" value="$doc.idDocument">-->
+					$doc.title <small> [<a class="infolinks" href="javascript:toggleInfo('$doc.id','abstract')">Abstract</a>] </small> 					
+				</td>
+				<td>				
+					<input type="radio" name="classification$doc.id" value="None" $("checked='true'" if doc.classification=='N' else '') onclick="setClassification($doc.id,'N')"/>None
+					<input type="radio" name="classification$doc.id" value="Include" $("checked='true'" if doc.classification=='I' else '') onclick="setClassification($doc.id,'I')"/>Include
+					<input type="radio" name="classification$doc.id" value="Exclude" $("checked='true'" if doc.classification=='E' else '') onclick="setClassification($doc.id,'E')"/>Exclude				
+				</td>
+				<td> <a href="?delDoc=$doc.id&id=$research.id&idSearch=$search.id">X</a> </td>
+			</tr>
+			<tr id="abs_$doc.id" class="abstract noshow">
+				<td colspan="6"> <i>$doc.abstract </i> <p> <b>Key words:</b> <i>$doc.keywords</i></p>
+					$if doc.tfIDF!='':
+					<p><b> TF-IDF: </b>
+					$for t in doc.tfIDF:
+						<small>[<b>$t[0] </b>, <i>$("{0:12,.3f}".format(float(t[1])))</i>]</small>
+					</p>
+				</td>				
+			</tr>			
+	</tbody>
+	</table>
+
+	<!-- div onde será criados os links da paginação 	-->
+	<div id="pageNav">
+		<script>
+			var pager = new Pager('tbDocs', 3000); 
+			pager.init(); 
+			pager.showPageNav('pager', 'pageNav'); 
+			pager.showPage(1);
+		</script>
+	</div>

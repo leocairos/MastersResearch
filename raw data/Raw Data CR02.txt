@@ -1,0 +1,55 @@
+Raw Data CR02
+==============================================
+
+Research: CR02 - Agile Requirements Engineering: A systematic literature review
+
+Search String: 
+TITLE-ABS-KEY ( ( "agile"  OR  "scrum"  OR  "kanban"  OR  "extreme programming"  OR  "lean" )  AND  ( "hci"  OR  "hmi"  OR  "ucd"  OR  "usability"  OR  "human"  OR  "user" )  AND  ( "requirements engineering" ) )  AND  PUBYEAR  >  1994  AND  PUBYEAR  <  2016  AND  ( LIMIT-TO ( LANGUAGE ,  "English" ) )
+
+112 result(s): 0 none(s), 6 include(s), 106 exclude(s).
+
+TF-IDF (none): []
+TF-IDF (include): ['requirements 5.532', 'agile 5.208', 'user 5.079', 'software 4.686', 'engineering 4.591']
+TF-IDF (exclude): ['requirements 9.114', 'agile 8.448', 'story 8.212', 'engineering 8.191', 'software 8.097']
+
+TOP TRENDS: ['architectural', 'languages', 'modeling', 'dealing', 'coding']
+WORDS MOST FREQUENTS: ['interaction', 'xp', 'card', 'up', 'aqusa', 'architectural']
+WORDS MOST FREQUENTS (STEMMER): ['card', 'interaction', 'xp', 'up', 'aqus', 'phas']
+
+
+ALL TERMS: 
+	agile                ['interaction', 'role', 'mobile', 'management', 'scale']              
+	engineering          ['reengineering', 'organizational', 'organizations', 'exploring', 'monitoring']
+	extreme              ['programming', 'xp', 'card', 'cycle', 'meet', 'successful']          
+	hci                  ['science', 'usability', 'include', 'findings', 'workshop']           
+	hmi                  []                                                                    
+	human                ['dynamic', 'incorporating', 'interaction', 'evidence', 'metrics', 'manage']
+	kanban               []                                                                    
+	lean                 ['holistic', 'off', 'theory', 'available', 'people', 'clear']         
+	programming          ['extreme', 'xp', 'propose', 'extending', 'following', 'challenging'] 
+	requirements         ['requirement', 'elsevier', 'prioritization', 'elements', 'requires'] 
+	scrum                ['publishing', 'logical', 'adapted', 'up', 'aqusa', 'line']           
+	software             ['reuse', 'multi', 'virtual', 'diversity', 'field', 'popular']        
+	story                ['card', 'cards', 'does', 'customer']                                 
+	ucd                  ['heidelberg', 'involves', 'consultant', 'aqusa', 'up', 'industrial'] 
+	usability            ['hci', 'usable', 'experiences', 'agility', 'traceability', 'performance']
+	user                 ['whole', 'phases', 'phase', 'understand', 'find', 'under']           
+
+
+	
+Search String: 
+TITLE-ABS-KEY ( ( "agile"  OR  "scrum"  OR  "kanban"  OR  "extreme programming"  OR  "lean" )  AND  ( "hci"  OR  "hmi"  OR  "ucd"  OR  "usability"  OR  "human"  OR  "user" )  AND  ( "requirements engineering" ) AND NOT ("story" OR "card" OR "cards" OR "customer") )  AND  PUBYEAR  >  1994  AND  PUBYEAR  <  2016  AND  ( LIMIT-TO ( LANGUAGE ,  "English" ) )
+
+70 result(s): 0 none(s), 4 include(s), 66 exclude(s).
+
+
+Search String: 
+TITLE-ABS-KEY ( ( "agile"  OR  "scrum"  OR  "kanban"  OR  "extreme programming"  OR  "lean" or "xp" )  AND  ( "hci"  OR  "hmi"  OR  "ucd"  OR  "usability"  OR  "human"  OR  "user" )  AND  ( "requirements engineering" ) )  AND  PUBYEAR  >  1994  AND  PUBYEAR  <  2016  AND  ( LIMIT-TO ( LANGUAGE ,  "English" ) )
+
+116 result(s): 4 none(s), 6 include(s), 106 exclude(s).
+
+
+Search String: 
+TITLE-ABS-KEY ( ( "agile"  OR  "scrum"  OR  "kanban"  OR "lean" or "xp" )  AND  ( "hci"  OR  "hmi"  OR  "ucd"  OR  "usability"  OR  "human"  OR  "user" )  AND  ( "requirements engineering" ) )  AND  PUBYEAR  >  1994  AND  PUBYEAR  <  2016  AND  ( LIMIT-TO ( LANGUAGE ,  "English" ) )
+
+113 result(s): 4 none(s), 6 include(s), 103 exclude(s).

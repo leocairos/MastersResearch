@@ -1,0 +1,417 @@
+$def with (content)
+
+<html>
+<head>
+    <title>Master's Research</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<style type="text/css">
+body { background-color: white; font-family: Arial, sans-serif; font-size: 13px; line-height: 1.2; padding: 1em; color: #2E2E2E; margin: auto 2em; }
+
+#showsettings { border: 1px grey solid; padding: 0 0.5em; float:right; line-height: 1.6em; text-align: right; }
+#showsettings:hover { cursor: pointer; }
+
+div#tableSimple { 
+width: 100%;
+background-color: #efefef; 
+}
+
+table { width: 100%; empty-cells: show; border-spacing: 0em 0.2em; margin: 1em 0em; border-style: none; }
+th, td { border: 0px gray solid; border-width: 1px 1px; padding: 0.2em; vertical-align: top; text-align: left; }
+th { background-color: #efefef; }
+td + td, th + th { border-left: none; }
+
+td a { color: navy; text-decoration: none; }
+td a:hover  { text-decoration: underline; }
+
+tr.noshow { display: none;}
+tr.highlight td { background-color: #EFEFEF; border-top: 2px #2E2E2E solid; font-weight: bold; }
+tr.abstract td, tr.review td, tr.bibtex td { background-color: #EFEFEF; text-align: justify; border-bottom: 2px #2E2E2E solid; }
+tr.nextshow td { border-bottom: 1px gray solid; }
+
+tr.bibtex pre { width: 100%; overflow: auto; white-space: pre-wrap;}
+p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
+
+@media print {
+	p.infolinks, #qs_settings, #quicksearch, t.bibtex { display: none !important; }
+	tr { page-break-inside: avoid; }
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.pg-ctrl
+{
+	font:bold 16px verdana;
+	text-decoration: none; 
+	cursor: pointer;    
+	padding:4px;
+	margin:0px;
+	border: 1px;
+	line-height:30px;
+}
+.pg-normal 
+{
+	font:14px verdana;
+	text-decoration: none; 
+	cursor: pointer;    
+	padding:3px 6px;
+	margin:1px;
+	border: 1px solid #dde;
+}
+
+.pg-selected 
+{
+	font:14px verdana;
+	text-decoration: none;    
+	cursor: pointer;
+	background-color:#BBBBBB;
+	padding:3px 6px;
+	margin:1px;
+	border: 1px solid #dde;
+}
+
+.word-normal
+{
+	font:14px arial;
+	text-decoration: none;    
+	cursor: pointer;
+	padding:3px 6px;
+	margin:1px;
+	line-height:30px;
+	border: 1px solid #dde;
+	background-color:#C0C0C0; /* cor de fundo */
+	-webkit-border-radius: 8px; /* canto arredondado */
+	-moz-border-radius: 8px; /* canto arredondado */
+	border-radius: 8px; /* canto arredondado */
+}
+
+.word-normal a
+{
+	font:14px arial;
+	text-decoration: none;    
+	cursor: pointer;
+	color: black;
+	padding:3px 6px;
+}
+
+.word-tfIDF a
+{
+	font:12px arial;
+	color: black;
+	text-decoration: none;    
+	cursor: pointer;
+	padding:3px 6px;
+	margin:1px;
+	line-height:25px;
+	border: 1px solid #dde;
+	background-color:#D1D1D1; /* cor de fundo */
+	-webkit-border-radius: 8px; /* canto arredondado */
+	-moz-border-radius: 8px; /* canto arredondado */
+	border-radius: 8px; /* canto arredondado */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 16px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	-webkit-border-radius: 8px; /* canto arredondado */
+	-moz-border-radius: 8px; /* canto arredondado */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 4px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #D9D9D9}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color:  #f9f9f9
+}
+
+#rolagem { 
+	width:145px; 
+	height:40px;
+	padding: 1px 1px 1px 1px;
+	background-color:#fefefe; 
+	overflow:auto; 
+	overflow-x:hidden; 
+} 
+
+tr:hover:nth-child(2n-1) td {background-color: #D9D9D9; } 
+
+</style>
+	
+<script type="text/javascript">
+<!--
+function toggleInfo(objId,info) {
+
+	var entry = document.getElementById(objId);
+	var abs = document.getElementById('abs_'+objId);
+	
+	if (abs && info == 'abstract') {
+		abs.className.indexOf('noshow') == -1?abs.className = 'abstract noshow':abs.className = 'abstract show';
+	} else { 
+		return;
+	}
+
+	// check if one or the other is available
+	var absshow; 
+	(abs && abs.className.indexOf('noshow') == -1)? absshow = true: absshow = false;
+	
+	// highlight original entry
+	if(entry) {
+		if (absshow) {
+			entry.className = 'entry highlight show';
+		} else {
+			entry.className = 'entry show';
+		}
+	}
+	
+	// When there's a combination of abstract showing, need to add class for correct styling
+	if(absshow) {
+		('')?abs.className = 'abstract nextshow':abs.className = 'abstract';
+	} 
+	
+}
+
+//function pagination
+function Pager(tableName, itemsPerPage) {
+    this.tableName = tableName;
+    this.itemsPerPage = itemsPerPage;
+    this.currentPage = 1;
+    this.pages = 0;
+    this.inited = false;
+    
+    this.showRecords = function(from, to) {        
+        var rows = document.getElementById(tableName).rows;
+        // i starts from 1 to skip table header row
+        for (var i = 1; i < rows.length; i++) {
+            if (i < from || i > to)  
+                rows[i].style.display = 'none';
+            else
+                rows[i].style.display = '';
+        }
+    }
+    
+    this.showPage = function(pageNumber) {
+    	if (! this.inited) {
+    		alert("not inited");
+    		return;
+    	}
+
+        var oldPageAnchor = document.getElementById('pg'+this.currentPage);
+        oldPageAnchor.className = 'pg-normal';
+        
+        this.currentPage = pageNumber;
+        var newPageAnchor = document.getElementById('pg'+this.currentPage);
+        newPageAnchor.className = 'pg-selected';
+        
+        var from = (pageNumber - 1) * itemsPerPage + 1;
+        var to = from + itemsPerPage - 1;
+        this.showRecords(from, to);
+    }   
+    
+    this.prev = function() {
+        if (this.currentPage > 1)
+            this.showPage(this.currentPage - 1);
+    }
+    
+    this.next = function() {
+        if (this.currentPage < this.pages) {
+            this.showPage(this.currentPage + 1);
+        }
+    }                        
+    
+    this.init = function() {
+        var rows = document.getElementById(tableName).rows;
+        var records = (rows.length - 1); 
+        this.pages = Math.ceil(records / itemsPerPage);
+        this.inited = true;
+    }
+
+    this.showPageNav = function(pagerName, positionId) {
+    	if (! this.inited) {
+    		alert("not inited");
+    		return;
+    	}
+    	var element = document.getElementById(positionId);
+    	
+    	var pagerHtml = '<span onclick="' + pagerName + '.prev();" class="pg-ctrl"> &#171 </span>';
+        for (var page = 1; page <= this.pages; page++) {
+            pagerHtml += '<span id="pg' + page + '" class="pg-normal" onclick="' + pagerName + '.showPage(' + page + ');">' + page + '</span>';
+			pagerHtml += '  ';
+		}
+        pagerHtml += '<span onclick="'+pagerName+'.next();" class="pg-ctrl"> &#187;</span>';            
+        
+        element.innerHTML = pagerHtml;
+    }
+}
+
+//fuctions Master's Research LSC
+
+function setClassification(document, classific){ 
+	var http = new XMLHttpRequest();
+	var url = "/updClassification";
+	var params = "document="+document+"&classific="+classific;	
+	http.open("POST", url, true);
+
+	//Send the proper header information along with the request
+	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+	http.onreadystatechange = function() {//Call a function when the state changes.
+		if(http.readyState == 4 && http.status == 200) {
+			changeDivTfIdf(http.responseText);							
+			//addDivWords( '&nbsp; Processing the list of featured terms...');
+			//addDivWords( '&nbsp;&nbsp;<a href="javascript:getWordsSimilar()" style="display: none1;" />Get Similar</a>');
+			//getWordsSimilar();
+		}
+	}	
+	http.send(params);		
+}
+
+function validate(form){
+	with (form) {
+		if ( nameNewResearch.value ==""){
+			alert("Please, Type the name of the new research.");
+			nameNewResearch.focus();
+			return false;
+		}
+	}
+}
+
+function changeDivTfIdf (txtResponse) {
+    var myelement = document.getElementById("div_tfIDF");
+    myelement.innerHTML = txtResponse;
+}
+
+function changeDivWords (txtResponse) {
+    var myelement = document.getElementById("div_words");
+    myelement.innerHTML= txtResponse;
+}
+
+function addDivWords (txt) {
+    var myelement = document.getElementById("div_words");
+	myelement.innerHTML = txt;
+}
+
+function getWordsSimilar(){ 
+	var http = new XMLHttpRequest();
+	var url = "/getWordsSimilar";	
+	var idResearch = document.getElementById("idResearch").value.trim();	
+	var idSearch = document.getElementById("idSearch").value.trim();	
+	var searchString = document.getElementById("searchString").value.trim();	
+	changeDivWords('&nbsp; Processing the list of featured terms... ');			
+	if (idSearch>0) {
+		var params = "idResearch="+idResearch+"&idSearch="+idSearch+"&searchString="+searchString;
+		
+		http.open("POST", url, true);
+
+		//Send the proper header information along with the request
+		http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+		http.onreadystatechange = function() {//Call a function when the state changes.
+			if(http.readyState == 4 && http.status == 200) {
+				changeDivWords(http.responseText);			
+			}
+		}	
+		http.send(params);
+	}
+}
+
+function generateLogAnalyse(){ 
+	var http = new XMLHttpRequest();
+	var url = "/generateLogAnalyse";			
+	var idSearch = document.getElementById("idSearch").value.trim();	
+	var searchString = document.getElementById("searchString").value.trim();	
+	addDivWords('&nbsp; Generating log report for analysis...');			
+	if (idSearch>0) {
+		var params = "idSearch="+idSearch+"&searchString="+searchString;
+		
+		http.open("POST", url, true);
+
+		//Send the proper header information along with the request
+		http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+		http.onreadystatechange = function() {//Call a function when the state changes.
+			if(http.readyState == 4 && http.status == 200) {
+				//changeDivWords(http.responseText);			
+				changeDivWords('&nbsp; Console generated log.');			
+			}
+		}	
+		http.send(params);
+	}
+}
+
+function updInput(aux, word){
+	var txt = document.getElementById("searchString");	
+	txt.value = txt.value + ' AND ' + aux + ' "' + word + '"';
+}
+	
+-->
+
+</script>
+	
+</head>
+<body>
+
+<center> <h1> Systematic Literature Review </h1> </center>
+
+$:content
+
+<footer>
+  <hr>
+  <center> Developed by <b><i><a href="http://www.rdlsc.com" target="_blank">RDLSC Master's Research</a> </i></b></center>
+</footer>
+</body>
+</html>

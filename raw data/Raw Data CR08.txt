@@ -1,0 +1,47 @@
+Raw Data CR08
+==============================================
+
+Research: CR08 - Identifying refactoring opportunities in object-oriented code: A systematic literature review
+
+Search String: 
+( ABS ( "object-oriented"  OR  "object oriented"  OR  "class"  OR  "classes"  OR  "method"  OR  "methods"  OR  "attribute"  OR  "attributes" )  OR  TITLE ( "object-oriented"  OR  "object oriented"  OR  "class"  OR  "classes"  OR  "method"  OR  "methods"  OR  "attribute"  OR  "attributes" ) )  AND  ( ABS ( "refactor*" )  OR  TITLE ( "refactor*" ) )  AND  ( ABS ( "estimat*"  OR  "predict*"  OR  "determin*"  OR  "identif*"  OR  "indicat*"  OR  "detect*"  OR  "track*" )  OR  TITLE ( "estimat*"  OR  "predict*"  OR  "determin*"  OR  "identif*"  OR  "indicat*"  OR  "detect*"  OR  "track*" ) )  AND  PUBYEAR  <  2014  AND  ( LIMIT-TO ( SRCTYPE ,  "p " )  OR  LIMIT-TO ( SRCTYPE ,  "j " ) )  AND  ( LIMIT-TO ( LANGUAGE ,  "English " ) )
+
+473 result(s): 0 none(s), 33 include(s), 440 exclude(s).
+
+TF-IDF (none): []
+TF-IDF (include): ['refactoring 7.651', 'software 7.474', 'method 6.830', 'code 6.643', 'class 6.325']
+TF-IDF (exclude): ['refactoring 10.379', 'patterns 10.243', 'software 10.219', 'code 9.694', 'architecture 9.490']
+
+TOP TRENDS: ['methods', 'long', 'classifiers', 'related', 'relates', 'non']
+WORDS MOST FREQUENTS: ['methods', 'attributed', 'contribute', 'measures', 'metrics', 'classifier']
+WORDS MOST FREQUENTS (STEMMER): ['method', 'classifi', 'detect', 'attributed', 'attribut', 'contribut']
+
+
+ALL TERMS: 
+	ABS                  []                                                                    
+	SRCTYPE              []                                                                    
+	TITLE                []                                                                    
+	architecture         ['architectures', 'architectural', 'lecture', 'turing']               
+	attribute            ['attributed', 'attributes', 'contribute', 'measures']                
+	attributes           ['attribute', 'attributed', 'contribute', 'measures']                 
+	class                ['classes', 'subclass', 'metrics', 'classifier']                      
+	classes              ['subclasses', 'class', 'cohesive', 'classifier']                     
+	code                 ['codes', 'clones', 'fragments', 'detects', 'appropriately', 'inappropriate']
+	detect               ['detects', 'detector', 'detected', 'inappropriate']                  
+	determin             []                                                                    
+	estimat              []                                                                    
+	identif              []                                                                    
+	indicat              []                                                                    
+	method               ['methods', 'viz', 'boc', 'exact', 'detect']                          
+	methods              ['method', 'mc', 'metrics', 'validate', 'exact']                      
+	object               ['oriented', 'objects', 'objective', 'aspect', 'visualizing', 'aspectj']
+	object oriented      []                                                                    
+	oriented             ['object', 'aspect', 'orientation', 'embedded', 'integrated', 'extreme']
+	patterns             ['pattern', 'antipatterns', 'anti', 'antipattern']                    
+	predict              ['predictive', 'predicting', 'prediction', 'predictors', 'impact']    
+	refactor             ['refactory', 'refactoring', 'refactories', 'refactored']             
+	refactoring          ['refactorings', 'refactor', 'refactories', 'reflect', 'truerefactor']
+	software             ['delta', 'aware', 'engineering', 'product', 'internal', 'enhance']   
+	track                ['tracking', 'box', 'onward', 'forms', 'se', 'grammars']   
+	
+	

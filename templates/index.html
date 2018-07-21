@@ -1,0 +1,71 @@
+$def with (researchs, msg)
+
+$if msg!='':
+	<div class="alert">
+	  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+	  $msg
+	</div>
+
+<form name="newResearch" action="/" method="POST" onsubmit="return validate(this)"> 
+	<p align="Right"> 
+		<input type="text" name="nameNewResearch" placeholder="Type the name of the new research..." style="width: 300px;"/> 
+			
+		<input type="radio" name="repositoryNewResearch" value="IEEE" />IEEE
+		<input type="radio" name="repositoryNewResearch" value="Scopus" checked="true"/>Scopus
+		
+		<input type="submit" value="create new research">
+	</p>
+</form>
+	
+$if len(researchs)>0:		
+	<table id="tbResearchs" border="1">
+	<thead><th width="5%">ID</th><th width="70%">Name Research</th><th width="20%">Created in</th><th width="10%"></th></thead>
+	
+		$for r in researchs :	
+			<tr id="$r.id" class="entry">
+				<td> $r.id </td>
+				<td> 
+					<a href="slr?id=$r.id&idSearch=0"> $r.name <small>(in $r.repository)</small></a> 
+					<small><i> [<a class="infolinks" href="javascript:toggleInfo('$r.id','abstract')">detail</a>] </i></small> 
+				</td>
+				<td> $(r.dateTime.strftime('%d/%m/%Y %H:%M:%S')) </td>
+				<td> <a href="?delR=$r.id">delete</a> </td>
+			</tr>
+			<tr id="abs_$r.id" class="abstract noshow">
+				<td colspan="6"> 
+					<table style="width: auto; border-spacing: 1em 0.5em; margin: 0em 2em">						
+						<tr>
+							<td style="font-weight: bold; border-width: 1px 0px; padding: 0em">Search String</td>
+							<td style="font-weight: bold; border-width: 1px 0px; padding: 0em">nGrams</td>
+							<td style="font-weight: bold; border-width: 1px 0px; padding: 0em">Amount Features</td>
+							<td style="font-weight: bold; border-width: 1px 0px; padding: 0em">Amount Results</td>
+							<td style="font-weight: bold; border-width: 1px 0px; padding: 0em">Amount Include</td>
+							<td style="font-weight: bold; border-width: 1px 0px; padding: 0em">Amount Exclude</td>
+							<td style="font-weight: bold; border-width: 0px 0px; padding: 0em"></td>
+						</tr>						
+						$for i in r.searchs:
+							<tr>
+								<td style="border-width: 0px 0px; padding: 0em"> <a href="slr?id=$r.id&idSearch=$i.id"> $i.searchString </a> </td>	
+								<td style="text-align: center; border-width: 0px 0px; padding: 0em">$i.nGrams</td>
+								<td style="text-align: center; border-width: 0px 0px; padding: 0em">$i.amountFeatures</td>
+								<td style="text-align: center; border-width: 0px 0px; padding: 0em">$("{0:12,.0f}".format(float(i.amountResults)))</td>
+								<td style="text-align: center; border-width: 0px 0px; padding: 0em">$("{0:12,.0f}".format(float(i.amountInclude)))</td>
+								<td style="text-align: center; border-width: 0px 0px; padding: 0em">$("{0:12,.0f}".format(float(i.amountExclude)))</td>
+								<td style="text-align: center; border-width: 0px 0px; padding: 0em"><a href="?delS=$i.id">X</a></td>
+							</tr>						
+					</table>					
+				</td>				
+			</tr>
+	</tbody>
+	</table>
+	
+	<!-- div onde será criados os links da paginação -->
+	<div id="pageNav">
+    <script>
+        var pager = new Pager('tbResearchs', 20); 
+        pager.init(); 
+        pager.showPageNav('pager', 'pageNav'); 
+        pager.showPage(1);
+    </script>		
+	</div>
+	

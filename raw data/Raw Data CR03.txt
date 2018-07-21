@@ -1,0 +1,43 @@
+Raw Data CR03
+==============================================
+
+Research: CR03 - Problems, causes and solutions when adopting continuous delivery - A systematic literature review
+
+Search String: 
+TITLE-ABS-KEY ( ( "continuous integration" OR "continuous delivery" OR "continuous deployment" ) AND "software" ) AND PUBYEAR < 2016
+
+368 result(s): 0 none(s), 24 include(s), 344 exclude(s).
+
+TF-IDF (none): []
+TF-IDF (include): ['software 7.124', 'continuous 6.847', 'integration 6.847', 'development 6.038', 'testing 5.667']
+TF-IDF (exclude): ['software 10.319', 'cloud 10.188', 'continuous 9.851', 'development 9.642', 'integration 9.459']
+
+TOP TRENDS: ['least', 'lead', 'locate', 'test', 'fault', 'effectiveness']
+WORDS MOST FREQUENTS: ['test', 'management', 'least', 'lead', 'locate', 'fault']
+WORDS MOST FREQUENTS (STEMMER): ['test', 'management', 'develop', 'least', 'lead', 'locat']
+
+
+ALL TERMS: 
+	cloud                ['clouds', 'cloudwave', 'netflix', 'engine', 'networks', 'collaborating']
+	continuous           ['continuity', 'continuously', 'and', 'workshop', 'processing', 'pace']
+	delivery             ['deliver', 'deliveries', 'delivering', 'increasingly', 'deploying']  
+	deployment           ['deployments', 'deploy', 'management', 'future']                     
+	development          ['develops', 'developed', 'develop', 'management', 'measurements', 'document']
+	integration          ['integrations', 'migration', 'integrating', 'information', 'orchestration', 'incorporation']
+	software             ['soft', 'boundaries', 'are', 'devops', 'prototyping']                
+	testing              ['test', 'prioritization', 'struggle', 'generating', 'locating', 'model']
+
+
+	
+Search String: 
+TITLE-ABS-KEY ( ( "continuous integration" OR "continuous delivery" OR "continuous deployment" ) AND ("software") AND NOT ("cloud") ) AND PUBYEAR < 2016
+
+323 result(s): 0 none(s), 24 include(s), 299 exclude(s).
+
+
+Search String: 
+TITLE-ABS-KEY ( ( "continuous integration" OR "continuous delivery" OR "continuous deployment" ) AND ("software" OR "testing") ) AND PUBYEAR < 2016
+
+424 result(s): 55 none(s), 25 include(s), 344 exclude(s).
+
+

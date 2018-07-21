@@ -1,0 +1,53 @@
+Raw Data CR05
+==============================================
+
+Research: CR05 - Software Maintainability: Systematic Literature Review and Current Trends
+
+Search String: 
+TITLE-ABS-KEY (("software maintainability" OR "software maintenance") AND ("prediction" OR "probability") AND ("classification" OR "regression" OR "machine learning" OR "artificial neural network" OR "tree net" OR "multiple regression" OR "decision tree" OR "support vector machine" OR "evolutionary algorithm") OR ("software maintenance" AND "refactoring") OR ("accessing software maintenance") OR ("software metrics" AND "software maintenance")) AND  PUBYEAR  >  1990 AND  PUBYEAR  <  2016
+
+137 result(s): 0 none(s), 16 include(s), 121 exclude(s).
+
+TF-IDF (none): []
+TF-IDF (include): ['software 7.305', 'maintainability 6.702', 'prediction 6.218', 'maintenance 6.005', 'metrics 5.790']
+TF-IDF (exclude): ['bug 9.868', 'software 9.588', 'fault 9.113', 'defect 8.681', 'bugs 8.509']
+
+TOP TRENDS: ['bayesian', 'second', 'object', 'location', 'education', 'simulation']
+WORDS MOST FREQUENTS: ['hyper', 'neuro', 'unsupervised', 'quantum', 'ann', 'fixed']
+WORDS MOST FREQUENTS (STEMMER): ['neur', 'machin', 'hyp', 'network', 'unsupervised', 'quantum']
+
+
+ALL TERMS: 
+	accessing            []                                                                    
+	algorithm            ['algorithms', 'moving', 'hyper', 'unsupervised', 'dataset']          
+	artificial           ['quantum', 'fnn', 'published', 'swarm', 'particle', 'ann']           
+	bug                  ['fixed', 'tracking', 'fixing', 'bugs', 'reported', 're']             
+	bugs                 ['fixed', 'opened', 'closed', 'bug', 're', 'reopened']                
+	classification       ['classifiers', 'classifier', 'identification', 'documentation', 'condition']
+	decision             ['decisions', 'hyper', 'precision', 'comprehension', 'version']       
+	defect               ['challenges', 'technology', 'defects', 'software', 'aspect']         
+	evolutionary         ['hyper', 'evolution', 'employed', 'traditional', 'transition', 'recognition']
+	fault                ['faulty', 'faults', 'repair', 'ones']                                
+	learning             ['learner', 'machine', 'unsupervised', 'ranking', 'handling', 'training']
+	machine              ['machines', 'vector', 'learning', 'data', 'technique']               
+	maintainability      ['testability', 'maintain', 'media', 'applicability', 'probability', 'capability']
+	maintenance          ['costs', 'becoming', 'today', 'software', 'manage', 'major']         
+	metrics              ['metric', 'empirically', 'investigation', 'paradigm', 'new']         
+	multiple             ['objective', 'splines', 'techniques', 'fuzzy', 'logic', 'neuro']     
+	net                  ['profit', 'ep', 'maximum', 'neuro', 'works', 'logic']                
+	network              ['neural', 'networks', 'ann', 'oriented']                             
+	neural               ['network', 'networks', 'quantum', 'oriented']                        
+	prediction           ['predictions', 'predicting', 'predictive', 'neural', 'recognition']  
+	probability          ['probabilities', 'probabilistic', 'impactscale', 'testability', 'reliability', 'stability']
+	refactoring          ['lehman', 'nearly', 'weighted', 'according', 'understanding', 'increasing']
+	regression           ['regressive', 'adaptive', 'multivariate', 'upon', 'poisson', 'cohesion']
+	software             ['authors', 'challenges', 'increasing', 'maintenance', 'defect', 'probabilistic']
+	support              ['supporting', 'vector', 'intelligence', 'effort', 'knowledge', 'researchers']
+	tree                 ['ep', 'trees', 'employed', 'treenet', 'strategy', 'random']          
+	vector               ['machines', 'support', 'machine', 'neuro', 'net']        
+
+
+Search String: 
+TITLE-ABS-KEY (("software maintainability" OR "software maintenance") AND ("prediction" OR "probability") AND ("classification" OR "regression" OR "machine learning" OR "artificial neural network" OR "tree net" OR "multiple regression" OR "decision tree" OR "support vector machine" OR "evolutionary algorithm") OR ("software maintenance" AND "refactoring") OR ("accessing software maintenance") OR ("software metrics" AND "software maintenance")  AND NOT ("bug" OR "fault" OR "defect" OR "bugs")) AND  PUBYEAR  >  1990 AND  PUBYEAR  <  2016
+
+72 result(s): 0 none(s), 16 include(s), 56 exclude(s).
