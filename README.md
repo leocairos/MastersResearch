@@ -48,4 +48,6 @@ The following figure demonstrates the main tool usage screen. And just below a b
 
 Note
 ----
-+ To use the Scopus API, you must configure the APIKEY and InstKey keys in rdlsc_util.py. These keys are for private use and are therefore not available.
++ To perform queries using the Scopus API, you must configure the "apiKey" and "insttoken" keys in rdlsc_util.py. These keys are for private use and are therefore not available.
++ apiKey can be generated at https://dev.elsevier.com/apikey/manage.
++ insttoken must be requested from Elsevier support at the same address.
