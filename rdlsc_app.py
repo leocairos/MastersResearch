@@ -184,6 +184,7 @@ def makeDataFile(idResearch, idSearch, docs):
         line = ''
         for doc in docs:
             line += doc.title + '. ' + doc.abstract + '. ' + doc.keywords + '. '
+        #print ('------abstract: ' + doc.abstract + '----------------\n\n')
         line = rdlsc_util.normalize_text(line)
         line = " ".join(line.split())
         arq.write(str(line).encode('utf-8', 'strict'))
