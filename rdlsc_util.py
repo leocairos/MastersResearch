@@ -6,11 +6,11 @@
 class cfgScopus:
     count = 25 # maximum number of results to be returned for the search. Default 25 results Max 200
     apiKey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-    insttoken = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+    insttoken = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
     
 class cfgIEEE:
     count = 1000 # maximum number of results to be returned for the search MAX=1000
-    apiKey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'    
+    apiKey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'    
     
 class cfgApp:
     fileDB = 'slr_tes.db' 
