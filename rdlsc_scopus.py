@@ -50,7 +50,8 @@ def runSearch(searchString):
     urlSearchApi += '&suppressNavLinks=true&httpAccept=application/json'
     if count:
         urlSearchApi += '&count=' + str(count)
-    urlSearchApi += '&insttoken=' + insttoken #+ '&subj=COMP'
+    if insttoken!='XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX':
+        urlSearchApi += '&insttoken=' + insttoken #+ '&subj=COMP'
 
     if searchString.find('AND  ( LIMIT-TO ( SUBJAREA ,  "COMP" ) )')>=0:
         urlSearchApi += '&subj=COMP'
