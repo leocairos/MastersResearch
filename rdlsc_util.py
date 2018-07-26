@@ -4,7 +4,7 @@
 
 # https://dev.elsevier.com/api_key_settings.html
 class cfgScopus:
-    count = 200 # maximum number of results to be returned for the search. Default 25 results Max 200
+    count = 25 # maximum number of results to be returned for the search. Default 25 results Max 200
     apiKey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
     insttoken = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
     
