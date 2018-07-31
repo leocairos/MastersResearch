@@ -1,0 +1,227 @@
+Termo no agrupamento com OR
+Termo e Correlatos (Termo OR cbow)
+Termo e Correlatos (cbow AND skip)
+==============================================================================================================================
+Research: Agile Requirements Engineering: A systematic literature review
+countWords: 17.961
+
+Search String: 
+TITLE-ABS-KEY ( ( "agile"  OR  "scrum"  OR  "kanban"  OR  "extreme programming"  OR  "lean" )  AND  ( "hci"  OR  "hmi"  OR  "ucd"  OR  "usability"  OR  "human"  OR  "user" )  AND  ( "requirements engineering" ) )  AND  PUBYEAR  >  1994  AND  PUBYEAR  <  2016
+
+112 result(s): 0 none(s), 6 include(s), 106 exclude(s).
+
+TF-IDF (none): []
+TF-IDF (include): ['requirements 5.532', 'agile 5.208', 'user 5.079', 'software 4.686', 'engineering 4.591']
+TF-IDF (exclude): ['requirements 9.114', 'agile 8.448', 'story 8.212', 'engineering 8.191', 'software 8.097']
+
+TOP TRENDS: ['users', 'models', 'evaluating', 'integration']
+WORDS MOST FREQUENTS: ['S extending', 'S 2007', 'C criteria', 'users', 'models', 'evaluating']
+WORDS MOST FREQUENTS (STEMMER): ['s extending', 's 2007', 'c crit', 's card', 'us', 'model']
+
+
+ALL TERMS: 
+	agile                ['S foundation', 'S jad', 'S nerv', 'C web', 'C point', 'C line']     
+	engineering          ['S reengineering', 'S engineers', 'S monitoring', 'C being', 'C incorporating', 'C putting']
+	extreme              ['S programming', 'S extending', 'S certain', 'C xp', 'C popularity', 'C extensive']
+	hci                  ['S human', 'S interaction', 'C contain', 'C proceedings', 'C conference']
+	hmi                  []                                                                    
+	human                ['S hci', 'S experiences', 'C commercial', 'C metrics']               
+	kanban               []                                                                    
+	lean                 ['S schema', 'S apps', 'S pragmatic', 'C around', 'C groups', 'C possible']
+	programming          ['S extreme', 'S extending', 'S maintaining', 'C providing', 'C showing', 'C employing']
+	requirements         ['S requirement', 'S conflicts', 'C capture', 'C elements', 'C like'] 
+	scrum                ['S switzerland', 'S adapted', 'S publishing', 'C two', 'C years', 'C criteria']
+	software             ['S tool', 'S quality', 'S agile', 'C plan', 'C authors', 'C reuse']  
+	story                ['S card', 'S cards', 'S capture', 'C stories', 'C customer', 'C related']
+	ucd                  ['S incorporating', 'S centered', 'S consultant', 'C criteria', 'C deep', 'C insights']
+	usability            ['S heidelberg', 'S berlin', 'S usable', 'C traceability', 'C berlin', 'C practical']
+	user                 ['S map', 'S scenarios', 'S users', 'C state', 'C resulted', 'C however']
+	
+TF-IDF unico e não presente na SS original:
+	TF-IDF Include:
+	 + user (5.079) que já consta na SS
+		+ Correlatos ['S map', 'S scenarios', 'S users', 'C state', 'C resulted', 'C however']
+			
+			TITLE-ABS-KEY ( ( "agile"  OR  "scrum"  OR  "kanban"  OR  "extreme programming"  OR  "lean" )  AND  ( "hci"  OR  "hmi"  OR  "ucd"  OR  "usability"  OR  "human"  OR  "user" OR "state" OR "resulted" or "however")  AND  ( "requirements engineering" ) )  AND  PUBYEAR  >  1994  AND  PUBYEAR  <  2016
+			175 result(s): 62 none(s), 7 include(s), 106 exclude(s).
+			
+			TITLE-ABS-KEY ( ( "agile"  OR  "scrum"  OR  "kanban"  OR  "extreme programming"  OR  "lean" )  AND  ( "hci"  OR  "hmi"  OR  "ucd"  OR  "usability"  OR  "human"  OR  "user" OR ( ("user" OR "state" OR "resulted" or "however") AND ("map" OR "scenarios" OR "users") ) )  AND  ( "requirements engineering" ) )  AND  PUBYEAR  >  1994  AND  PUBYEAR  <  2016
+			116 result(s): 4 none(s), 6 include(s), 106 exclude(s).
+			
+	 
+	TF-IDF Exclude:
+	 + story (8.212): 
+		TITLE-ABS-KEY ( ( "agile"  OR  "scrum"  OR  "kanban"  OR  "extreme programming"  OR  "lean" )  AND  ( "hci"  OR  "hmi"  OR  "ucd"  OR  "usability"  OR  "human"  OR  "user" )  AND  ( "requirements engineering" ) AND NOT ("story") )  AND  PUBYEAR  >  1994  AND  PUBYEAR  <  2016
+		77 result(s): 0 none(s), 4 include(s), 73 exclude(s).
+		
+		+ Correlatos ['S card', 'S cards', 'S capture', 'C stories', 'C customer', 'C related']
+			TITLE-ABS-KEY ( ( "agile"  OR  "scrum"  OR  "kanban"  OR  "extreme programming"  OR  "lean" )  AND  ( "hci"  OR  "hmi"  OR  "ucd"  OR  "usability"  OR  "human"  OR  "user" )  AND  ( "requirements engineering" ) AND NOT ("story" OR "stories" OR "customer" OR "related"))  AND  PUBYEAR  >  1994  AND  PUBYEAR  <  2016
+			68 result(s): 0 none(s), 3 include(s), 65 exclude(s).
+			
+			TITLE-ABS-KEY ( ( "agile"  OR  "scrum"  OR  "kanban"  OR  "extreme programming"  OR  "lean" )  AND  ( "hci"  OR  "hmi"  OR  "ucd"  OR  "usability"  OR  "human"  OR  "user" )  AND  ( "requirements engineering" ) AND NOT (("story" OR "stories" OR "customer" OR "related") AND ("card" OR "cards" OR "capture")))  AND  PUBYEAR  >  1994  AND  PUBYEAR  <  2016
+			106 result(s): 0 none(s), 6 include(s), 100 exclude(s).		
+			
+		
+=================================================================================================================================
+
+Research: Problems, causes and solutions when adopting continuous delivery - A systematic literature review
+countWords: 5.949
+
+Search String: 
+TITLE-ABS-KEY ( ( "continuous integration" OR "continuous delivery" OR "continuous deployment" ) AND "software" ) AND PUBYEAR < 2016
+
+368 result(s): 0 none(s), 24 include(s), 344 exclude(s).
+
+TF-IDF (none): []
+TF-IDF (include): ['software 5.866', 'continuous 5.532', 'integration 5.325', 'development 4.253', 'status 4.040']
+TF-IDF (exclude): ['continuous 8.468', 'software 8.463', 'cloud 8.317', 'integration 7.953', 'development 7.623']
+
+TOP TRENDS: ['awareness', 'information', 'report', 'education', 'cmmi']
+WORDS MOST FREQUENTS: ['C devops', 'C involvement', 'S development', 'awareness', 'information', 'report']
+WORDS MOST FREQUENTS (STEMMER): ['c devop', 'c involvement', 's development', 'awarenes', 'information', 'report']
+
+
+ALL TERMS: 
+	cloud                ['S services', 'S paas', 'S architecting', 'C services', 'C loops', 'C lifecycle']
+	continuous           ['S and', 'S applications', 'S module', 'C equipment', 'C devops', 'C conference']
+	delivery             ['S version', 'S proceedings', 'S beyond', 'C devops', 'C executable', 'C user']
+	deployment           ['S release', 'S them', 'S involvement', 'C involvement', 'C development', 'C management']
+	development          ['S integration', 'S software', 'S environment', 'C deployment', 'C instrument', 'C involvement']
+	integration          ['S education', 'S development', 'S testing', 'C interaction', 'C implementation', 'C international']
+	software             ['S development', 'S business', 'S specification', 'C engineering', 'C learning', 'C tool']
+	status               ['S awareness', 'S studio', 'S teams', 'C static', 'C prioritization', 'C statistical']
+
+
+TF-IDF unico e não presente na SS original:
+	TF-IDF Include:
+		+ status (4.040): não é possivel identificar o grupo para agrupamento
+			TITLE-ABS-KEY ( ( "continuous integration" OR "continuous delivery" OR "continuous deployment" ) AND "software" AND "status") AND PUBYEAR < 2016
+			12 result(s): 0 none(s), 2 include(s), 10 exclude(s).			
+			
+			TITLE-ABS-KEY ( ( "continuous integration" OR "continuous delivery" OR "continuous deployment" ) AND ("software" OR "status")) AND PUBYEAR < 2016
+			384 result(s): 16 none(s), 24 include(s), 344 exclude(s).
+			
+			TITLE-ABS-KEY ( ( "continuous integration" OR "continuous delivery" OR "continuous deployment" OR "status" ) AND "software") AND PUBYEAR < 2016
+			17863 result(s)
+			
+			+ Correlatos ['S awareness', 'S studio', 'S teams', 'C static', 'C prioritization', 'C statistical']
+				TITLE-ABS-KEY ( ( "continuous integration" OR "continuous delivery" OR "continuous deployment" ) AND ("software") AND ("status" OR "static" OR "prioritization" OR "statistical") ) AND PUBYEAR < 2016
+				33 result(s): 0 none(s), 3 include(s), 30 exclude(s).
+			
+				TITLE-ABS-KEY ( ( "continuous integration" OR "continuous delivery" OR "continuous deployment" ) AND ("software") AND ( ("status" OR "static" OR "prioritization" OR "statistical") AND ("awareness" OR "studio" OR "teams") )) AND PUBYEAR < 2016
+				11 result(s): 0 none(s), 3 include(s), 8 exclude(s).
+			
+	TF-IDF Exclude:
+		+ cloud (8.317) 
+			TITLE-ABS-KEY ( ( "continuous integration" OR "continuous delivery" OR "continuous deployment" ) AND ("software") AND NOT ("cloud") ) AND PUBYEAR < 2016
+			323 result(s): 0 none(s), 24 include(s), 299 exclude(s).
+			
+			+ correlatos ['S services', 'S paas', 'S architecting', 'C services', 'C loops', 'C lifecycle']
+				TITLE-ABS-KEY ( ( "continuous integration" OR "continuous delivery" OR "continuous deployment" ) AND ("software") AND NOT ("cloud" OR "services" OR "loops" OR "lifecycle")) AND PUBYEAR < 2016
+				273 result(s): 0 none(s), 20 include(s), 253 exclude(s).
+						
+				TITLE-ABS-KEY ( ( "continuous integration" OR "continuous delivery" OR "continuous deployment" ) AND ("software") AND NOT ( ("cloud" OR "services" OR "loops" OR "lifecycle") AND ("services" OR "paas" OR "architecting") ) ) AND PUBYEAR < 2016
+				315 result(s): 0 none(s), 22 include(s), 293 exclude(s).
+=====================================================================================================================================
+
+Research: What recommendation systems for software engineering recommend: A systematic literature review
+countWords: 49.343
+
+Search String: 
+TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) )  AND  PUBYEAR  <  2014
+
+264 result(s): 0 none(s), 37 include(s), 227 exclude(s).
+
+TF-IDF (none): []
+TF-IDF (include): ['software 7.293', 'code 7.038', 'development 6.325', 'recommendation 6.189', 'developers 6.101']
+TF-IDF (exclude): ['service 9.652', 'networks 9.540', 'network 9.368', 'systems 9.246', 'mobile 9.195']
+
+TOP TRENDS: ['external', 'ide', 'down', 'any', 'term']
+WORDS MOST FREQUENTS: ['S develop', 'C develop', 'S developed', 'C developed', 'C developers', 'S networking']
+WORDS MOST FREQUENTS (STEMMER): ['c develop', 's develop', 's developed', 'c developed', 's engine', 's network']
+
+
+ALL TERMS: 
+	code                 ['S undertaken', 'S jdt', 'S clone', 'C conducted', 'C consists', 'C main']
+	developer            ['S developers', 'S developed', 'S develop', 'C developed', 'C developers', 'C develop']
+	developers           ['S developer', 'S developed', 'S develop', 'C develop', 'C developer', 'C developed']
+	development          ['S developments', 'S develop', 'S developing', 'C developments', 'C develop', 'C developers']
+	engineering          ['S engineer', 'S workshops', 'S engineers', 'C researchers', 'C interesting', 'C findings']
+	mobile               ['S mobility', 'S hoc', 'S invasion', 'C toward', 'C optimal', 'C wireless']
+	network              ['S networks', 'S networked', 'S networking', 'C networks', 'C networked', 'C professional']
+	networks             ['S network', 'S networking', 'S summarization', 'C network', 'C networked', 'C professional']
+	recommendation       ['S recommendations', 'S recommender', 'S recommended', 'C resolution', 'C evolution', 'C allocation']
+	recommender          ['S recommenders', 'S recommended', 'S recommending', 'C recommends', 'C recommend', 'C recommended']
+	service              ['S services', 'S standardization', 'S care', 'C services', 'C attacks', 'C lattice']
+	software             ['S soft', 'S factorization', 'S aware', 'C processes', 'C soft', 'C engineer']
+	system               ['S systems', 'S asp', 'S subscribe', 'C systems', 'C systematic', 'C pragmatic']
+	systems              ['S system', 'S informatics', 'S information', 'C system', 'C procedurally', 'C uml']
+
+TF-IDF unico e não presente na SS original:
+	TF-IDF Include:
+		+ software (7.293), development (6.325), recommendation (6.189), developers(6.101): já estão presentes na SS original (em termos compostos)
+		
+		+ code (7.038): não é possivel identificar o grupo para agrupamento
+			TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND ("code") )  AND  PUBYEAR  <  2014
+			51 result(s): 0 none(s), 20 include(s), 31 exclude(s).
+
+			TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" OR "code") )  AND  PUBYEAR  <  2014
+			332 result(s): 68 none(s), 37 include(s), 227 exclude(s).
+			
+			TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system"  OR "code")  AND  ( "software development"  OR  "software developer"  OR  "software engineering") )  AND  PUBYEAR  <  2014
+			332 result(s): 68 none(s), 37 include(s), 227 exclude(s).
+			
+			+ correlatos ['S undertaken', 'S jdt', 'S clone', 'C conducted', 'C consists', 'C main']
+				TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND ("code" OR "conducted" OR "consists" OR "main") )  AND  PUBYEAR  <  2014
+				74 result(s): 0 none(s), 23 include(s), 51 exclude(s).
+			
+				...
+		
+	TF-IDF Exclude:
+		+ service (9.652)		
+			TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND NOT ("service") ) AND  PUBYEAR  <  2014
+			210 result(s): 0 none(s), 34 include(s), 176 exclude(s).
+			
+			+ correlatos ['S services', 'S standardization', 'S care', 'C services', 'C attacks', 'C lattice']
+				TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND NOT ("service" OR "services" OR "attacks" OR "lattice") ) AND  PUBYEAR  <  2014
+				207 result(s): 0 none(s), 34 include(s), 173 exclude(s).
+				
+				TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND NOT ( ("service" OR "services" OR "attacks" OR "lattice") AND ("services" OR "standardization" OR "care") ) ) AND  PUBYEAR  <  2014
+				210 result(s): 0 none(s), 34 include(s), 176 exclude(s).
+
+		+ networks (9.540)
+			TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND NOT ("networks") ) AND  PUBYEAR  <  2014
+			231 result(s): 0 none(s), 36 include(s), 195 exclude(s).
+				
+				+ Correlatos ['S network', 'S networking', 'S summarization', 'C network', 'C networked', 'C professional']
+					TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND NOT ("networks" OR "network" OR "networked" OR "professional" ) ) AND  PUBYEAR  <  2014
+					228 result(s): 0 none(s), 36 include(s), 192 exclude(s).
+					
+					TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND NOT ( ("networks" OR "network" OR "networked" OR "professional" ) AND ("network" OR "networking" OR "summarization") ))  AND  PUBYEAR  <  2014
+					231 result(s): 0 none(s), 36 include(s), 195 exclude(s).
+				
+		+ network (9.368)
+			TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND NOT ("network") ) AND  PUBYEAR  <  2014
+			231 result(s): 0 none(s), 36 include(s), 195 exclude(s).
+			
+			+ correlatos ['S networks', 'S networked', 'S networking', 'C networks', 'C networked', 'C professional']
+			Search String: 
+				TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND NOT ("network" OR "networks" OR "networked" OR "professional" ) ) AND  PUBYEAR  <  2014
+				228 result(s): 0 none(s), 36 include(s), 192 exclude(s).
+
+				TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND NOT ( ("network" OR "networks" OR "networked" OR "professional" ) AND ("networks" OR "networked" OR "networking") )) AND  PUBYEAR  <  2014
+				230 result(s): 0 none(s), 36 include(s), 194 exclude(s).
+
+		+ systems (9.246): já está presente na SS (em termos compostos)
+
+		+ mobile (9.195)             
+			TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND NOT ("mobile") ) AND  PUBYEAR  <  2014
+			239 result(s): 0 none(s), 37 include(s), 202 exclude(s).
+			
+			+ correlatos ['S mobility', 'S hoc', 'S invasion', 'C toward', 'C optimal', 'C wireless']
+				TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND NOT ("mobile" OR "toward" OR "optimal" OR "wireless") ) AND  PUBYEAR  <  2014
+				228 result(s): 0 none(s), 35 include(s), 193 exclude(s).
+			
+				TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND NOT ( ("mobile" OR "toward" OR "optimal" OR "wireless") AND ("mobility" OR "hoc" OR "invasion") )) AND  PUBYEAR  <  2014
+				253 result(s): 0 none(s), 37 include(s), 216 exclude(s).
+		
