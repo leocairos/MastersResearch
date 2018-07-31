@@ -225,3 +225,16 @@ TF-IDF unico e não presente na SS original:
 				TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND NOT ( ("mobile" OR "toward" OR "optimal" OR "wireless") AND ("mobility" OR "hoc" OR "invasion") )) AND  PUBYEAR  <  2014
 				253 result(s): 0 none(s), 37 include(s), 216 exclude(s).
 		
+		* service (9.652) ['S services', 'S standardization', 'S care', 'C services', 'C attacks', 'C lattice']
+		* networks (9.540)['S network', 'S networking', 'S summarization', 'C network', 'C networked', 'C professional']
+		* network (9.368) ['S networks', 'S networked', 'S networking', 'C networks', 'C networked', 'C professional']
+		* mobile (9.195)  ['S mobility', 'S hoc', 'S invasion', 'C toward', 'C optimal', 'C wireless']
+			TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND NOT ("service" OR "networks" OR "network" OR "mobile") ) AND  PUBYEAR  <  2014
+			184 result(s): 0 none(s), 33 include(s), 151 exclude(s).
+			
+			TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND NOT ("service" OR "services" OR "attacks" OR "lattice" OR "networks" OR "network" OR "network" OR "networked" OR "professional" OR "mobile" OR "toward" OR "optimal" OR "wireless") ) AND  PUBYEAR  <  2014
+			171 result(s): 0 none(s), 31 include(s), 140 exclude(s).
+
+			TITLE-ABS-KEY ( ( "recommendation systems"  OR  "recommendation system"  OR  "recommender systems"  OR  "recommender system" )  AND  ( "software development"  OR  "software developer"  OR  "software engineering" ) AND NOT ( (("service" OR "services" OR "attacks" OR "lattice") AND ("services" OR "standardization" OR "care")) OR (("networks" OR "network" OR "networked" OR "professional" ) AND ("network" OR "networking" OR "summarization")) OR (("network" OR "networks" OR "networked" OR "professional" ) AND ("networks" OR "networked" OR "networking")) OR (("mobile" OR "toward" OR "optimal" OR "wireless") AND ("mobility" OR "hoc" OR "invasion"))	) ) AND  PUBYEAR  <  2014
+			190 result(s): 0 none(s), 33 include(s), 157 exclude(s).
+						
