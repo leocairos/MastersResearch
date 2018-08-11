@@ -1,7 +1,3 @@
-Termo no agrupamento com OR
-Termo e Correlatos (Termo OR cbow)
-Termo e Correlatos (cbow AND skip)
-==============================================================================================================================
 Research: Agile Requirements Engineering: A systematic literature review
 countWords: 17.961
 
