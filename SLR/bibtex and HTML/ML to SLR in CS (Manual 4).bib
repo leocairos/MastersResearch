@@ -1,0 +1,96 @@
+% Encoding: UTF-8
+@article{Yu2016,
+abstract = {Literature reviews can be time-consuming and tedious to complete. By cataloging and refactoring three state-of-the-art active learning techniques from evidence-based medicine and legal electronic discovery, this paper finds and implements FASTREAD, a faster technique for studying a large corpus of documents. This paper assesses FASTREAD using datasets generated from existing SE literature reviews (Hall, Wahono, Radjenovic, Kitchenham et al.). Compared to manual methods, FASTREAD lets researchers find 95{\%} relevant studies after reviewing an order of magnitude fewer papers. Compared to other state-of-the-art automatic methods, FASTREAD reviews 20-50{\%} fewer studies while finding same number of relevant primary studies in a systematic literature review.},
+annote = {RQ1: FASTREAD; Support vector machines (SVM) are a well-known and widely used classification technique; 
+Active learning is a cost-aware machine learning algorithm where labels of training data can be acquired with certain costs; 
+TfidfVectorizer in scikit-learn is utilized for the above preprocessing and featurization steps. 
+Alternatives such as stemming, LDA [3], paragraph vectors [32] require further exploration and are scheduled in our future works. 
+All 32 treatments use the same classifier– linear SVM from scikit-learn;
+RQ2: three datasets are created reverse-engineering existing SLRs and being used in this study to simulate the process 
+of excluding irrelevant studies; Our datasets are generated using information in the original SLR literature. 
+Our candidate studies are retrieved by applying similar if not the same the search string from original SLR literature and search in IEEE Xplore;
+RQ3: The performance of each algorithm is thus evaluated by its recall vs. studies reviewed curve; 
+This performance metrics is suggested by [10, 11, 53] and best fits the objectives of excluding irrelevant studies problem; 
+Table 2: Scott-Knott analysis for number of studies reviewed/ work saved over sampling to reach 95{\%} recall; 
+In general, active learning techniques can reduce cost in primary study selections with a sacrifice of(say 5{\%}) recall; 
+Our results and estimations suggest that FASTREAD can save more than 40{\%} ofthe effort 
+(associated with the primary selection study phase ofa literature review) while retrieving 95{\%} ofthe “relevant” studies.
+RQ4: selection; to reduce the effort required to exclude primary studies;
+
+QC1: Pesquisa com proposta e experimento
+QC2: Sim, 
+QC3: Sim, com os originais (manual)
+QC4: Sim, no capitulo 5.},
+archivePrefix = {arXiv},
+arxivId = {1612.03224},
+author = {Yu, Zhe and Kraft, Nicholas A and Menzies, Tim},
+eprint = {1612.03224},
+file = {:C$\backslash$:/Users/leocairos/Mendeley/2016{\_}Yu, Kraft, Menzies{\_}Finding Better Active Learners for Faster Literature Reviews.pdf:pdf},
+journal = {arXiv.org},
+keywords = {.ML to SLR - 2017 (2018.01.07),Active,Engineering {\textperiodcentered},Learning {\textperiodcentered},Literature,Primary,Review {\textperiodcentered},Selection,Software,Study,Systematic,[gfc]: manual,[lsc]: Included,[lsc]: eligibility,zz.inGroup,zz01 Glauco},
+mendeley-tags = {.ML to SLR - 2017 (2018.01.07),[gfc]: manual,[lsc]: Included,[lsc]: eligibility,zz.inGroup,zz01 Glauco},
+month = {dec},
+title = {{Finding Better Active Learners for Faster Literature Reviews}},
+url = {http://arxiv.org/abs/1612.03224},
+year = {2016}
+}
+
+@Article{OMara-Eves2015,
+  author        = {O'Mara-Eves, Alison and Thomas, James and McNaught, John and Miwa, Makoto and Ananiadou, Sophia},
+  title         = {{Using text mining for study identification in systematic reviews: A systematic review of current approaches}},
+  journal       = {Systematic Reviews},
+  year          = {2015},
+  volume        = {4},
+  number        = {1},
+  pages         = {5},
+  issn          = {20464053},
+  __markedentry = {[leocairos:]},
+  abstract      = {BACKGROUND: The large and growing number of published studies, and their increasing rate of publication, makes the task of identifying relevant studies in an unbiased way for inclusion in systematic reviews both complex and time consuming. Text mining has been offered as a potential solution: through automating some of the screening process, reviewer time can be saved. The evidence base around the use of text mining for screening has not yet been pulled together systematically; this systematic review fills that research gap. Focusing mainly on non-technical issues, the review aims to increase awareness of the potential of these technologies and promote further collaborative research between the computer science and systematic review communities.$\backslash$r$\backslash$n$\backslash$r$\backslash$nMETHODS: Five research questions led our review: what is the state of the evidence base; how has workload reduction been evaluated; what are the purposes of semi-automation and how effective are they; how have key contextual problems of applying text mining to the systematic review field been addressed; and what challenges to implementation have emerged? We answered these questions using standard systematic review methods: systematic and exhaustive searching, quality-assured data extraction and a narrative synthesis to synthesise findings.$\backslash$r$\backslash$n$\backslash$r$\backslash$nRESULTS: The evidence base is active and diverse; there is almost no replication between studies or collaboration between research teams and, whilst it is difficult to establish any overall conclusions about best approaches, it is clear that efficiencies and reductions in workload are potentially achievable. On the whole, most suggested that a saving in workload of between 30{\%} and 70{\%} might be possible, though sometimes the saving in workload is accompanied by the loss of 5{\%} of relevant studies (i.e. a 95{\%} recall).$\backslash$r$\backslash$n$\backslash$r$\backslash$nCONCLUSIONS: Using text mining to prioritise the order in which items are screened should be considered safe and ready for use in 'live' reviews. The use of text mining as a 'second screener' may also be used cautiously. The use of text mining to eliminate studies automatically should be considered promising, but not yet fully proven. In highly technical/clinical areas, it may be used with a high degree of confidence; but more developmental and evaluative work is needed in other disciplines.},
+  annote        = {N{\~{a}}o atende IC1. Pode complementar SLR de Cairo},
+  doi           = {10.1186/2046-4053-4-5},
+  file          = {:C$\backslash$:/Users/leocairos/Mendeley/2015{\_}O'Mara-Eves et al.{\_}Using text mining for study identification in systematic reviews a systematic review of current approaches.pdf:pdf;:C$\backslash$:/Users/leocairos/Mendeley/2015{\_}O'Mara-Eves et al.{\_}Using text mining for study identification in systematic reviews a systematic review of current approaches(2).pdf:pdf;:C$\backslash$:/Users/leocairos/Mendeley/2015{\_}O'Mara-Eves et al.{\_}Using text mining for study identification in systematic reviews a systematic review of current approaches(3).doc:doc;:C$\backslash$:/Users/leocairos/Mendeley/2015{\_}O'Mara-Eves et al.{\_}Using text mining for study identification in systematic reviews a systematic review of current approaches(2).doc:doc;:C$\backslash$:/Users/leocairos/Mendeley/2015{\_}O'Mara-Eves et al.{\_}Using text mining for study identification in systematic reviews a systematic review of current approaches.doc:doc},
+  isbn          = {2046-4053},
+  keywords      = {.ML to SLR - 2017 (2018.01.07),Automation,LSC2016{\_}OLARISADE,Review efficiency,Screening,Study selection,Text mining,[lsc]: Excluded IC1,[lsc]: eligibility,[lsc]: manual,[lsc]: util,{\_}include,include,preference,very important,zz. include,zz.inGroup,zz0.1 manual,zz00 BRUNO/LEO,zz00 OLORISADE{\_}2016,zz02 SYSTEMATIC REVIEWS JORNAL,zz2016,zz99 FORA DE 2016.12.13},
+  mendeley-tags = {.ML to SLR - 2017 (2018.01.07),LSC2016{\_}OLARISADE,[lsc]: Excluded IC1,[lsc]: eligibility,[lsc]: manual,[lsc]: util,{\_}include,include,preference,very important,zz. include,zz.inGroup,zz0.1 manual,zz00 BRUNO/LEO,zz00 OLORISADE{\_}2016,zz02 SYSTEMATIC REVIEWS JORNAL,zz2016,zz99 FORA DE 2016.12.13},
+  pmid          = {25588314},
+  publisher     = {???},
+  url           = {http://www.systematicreviewsjournal.com/content/4/1/5{\%}5Cnhttp://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=4320539{\&}tool=pmcentrez{\&}rendertype=abstract{\%}5Cnhttp://systematicreviewsjournal.biomedcentral.com/articles/10.1186/2046-4053-4-5},
+}
+
+@Conference{Sun2012,
+  author        = {Sun, Y and Yang, Y and Zhang, H and Zhang, W and Wang, Q},
+  title         = {{Towards evidence-based ontology for supporting systematic literature review}},
+  booktitle     = {IET Seminar Digest},
+  year          = {2012},
+  volume        = {2012},
+  number        = {1},
+  pages         = {171--175},
+  __markedentry = {[leocairos:6]},
+  abstract      = {[Background]: Systematic Literature Review (SLR) has become an important software engineering research method but costs tremendous efforts. [Aim]: This paper proposes an approach to leverage on empirically evolved ontology to support automating key SLR activities. [Method]: First, we propose an ontology, SLRONT, built on SLR experiences and best practices as a groundwork to capture common terminologies and their relationships during SLR processes; second, we present an extended version of SLRONT, the COSONT and instantiate it with the knowledge and concepts extracted from structured abstracts. Case studies illustrate the details of applying it for supporting SLR steps. [Results]: Results show that through using COSONT, we acquire the same conclusion compared with sheer manual works, but the efforts involved is significantly reduced. [Conclusions]: The approach of using ontology could effectively and efficiently support the conducting of systematic literature review.},
+  annote        = {N{\~{a}}o atende IC1. N{\~{a}}o descreve uso de tecnicas de ML. Descreve a modelagem de um modelo de ontologia.},
+  doi           = {10.1049/ic.2012.0022},
+  file          = {:C$\backslash$:/Users/leocairos/Mendeley/2012{\_}Sun et al.{\_}Towards evidence-based ontology for supporting systematic literature review.pdf:pdf},
+  keywords      = {.ML to SLR - 2017 (2018.01.07),00 NO CAIRO,00 OMARA 2015,[lsc]: Excluded IC1,[lsc]: eligibility (snowbolling),zz00 OLORISADE{\_}2016,zz00 OMARA-EVES Include,zz00 OMARA-EVES{\_}2015},
+  mendeley-tags = {.ML to SLR - 2017 (2018.01.07),00 NO CAIRO,00 OMARA 2015,[lsc]: Excluded IC1,[lsc]: eligibility (snowbolling),zz00 OLORISADE{\_}2016,zz00 OMARA-EVES Include,zz00 OMARA-EVES{\_}2015},
+}
+
+@InProceedings{Malheiros2007,
+  author        = {Malheiros, Viviane and Hohn, Erika and Pinho, Roberto and Mendonca, Manoel and Maldonado, Jose Carlos},
+  title         = {{A Visual Text Mining approach for Systematic Reviews}},
+  booktitle     = {Proceedings of the First International Symposium on Empirical Software Engineering and Measurement},
+  year          = {2007},
+  pages         = {245--254},
+  month         = {sep},
+  publisher     = {IEEE},
+  __markedentry = {[leocairos:6]},
+  abstract      = {The software engineering research community has been adopting systematic reviews as an unbiased and fair way to assess a research topic. Despite encouraging early results, a systematic review process can be time consuming and hard to conduct. Thus, tools that help on its planning or execution are needed. This article suggests the use of visual text mining (VTM) to aid systematic reviews. A feasibility study was conducted comparing the proposed approach with a manual process. We observed that VTM can contribute to systematic review and we propose a new strategy called VTM-Based systematic review.},
+  annote        = {RQ1: use of Visual Text Mining (VTM); vector space model (VSM); term frequency, inverse document frequency measure measure[11]; the similarity of two documents is computed as the cosine distance of their vectors [12]; Normalized Compression Distance (NCD) [14] RQ2: Systematic review case study; A feasibil- ity study was conducted comparing the proposed approach with a manual process; Researchers B and C applied the VTM tool for the selection of primary sources RQ3: effectiveness, reduction workload, efficiency, precion; Considering the effectiveness of each researcher: (i) Researcher A, using manual review, chose 65{\%} of the articles included in the oracle, spending 3 hours of review; (ii) Researcher B, applying VTM, chose 55{\%} of the total of included articles, spending 49 minutes of review. In similar manner, Researcher C chose 57.5{\%} of the total of included articles, spending 51 minutes of review. In respect to efficiency of the researches, considering efficiency as "chosen and included articles"/"review time", the results were: Researcher A got 8.67 articles/hour using manual review; Researcher B and Researcher C, applying VTM, got 24.49 articles/hour and 23.53 articles/hour respectively. Researcher A had a precision of 83.87{\%} while Researchers B and C had 81.28{\%} and 92{\%} respectively. RQ4: selection of studies QC1: Pesquisa com estudo de caso QC2: Sim, coom detalhes de ferramenta, repositorio, perfil dos pesquisadores (A, B e C) e SLR replicada QC3: Sim, compara{\c{c}}{\~{a}}o entre manual (A) e com VTM (B e C) QC4: Sim, capitulo 6 e em RQ3},
+  doi           = {10.1109/ESEM.2007.13},
+  file          = {:C$\backslash$:/Users/leocairos/Mendeley/2007{\_}Malheiros et al.{\_}A Visual Text Mining approach for Systematic Reviews.pdf:pdf},
+  isbn          = {0-7695-2886-4},
+  issn          = {1938-6451},
+  keywords      = {.ML to SLR - 2017 (2018.01.07),00 HAMAD 2014,00 NO CAIRO,00 OMARA 2015,[lsc]: Included,[lsc]: eligibility (snowbolling),zz.ACM2018.01.20,zz.IEEE2018.01.20,zz.ML to SLR in CS - 2018.01.20,zz.SCOPUS2018.01.20},
+  mendeley-tags = {.ML to SLR - 2017 (2018.01.07),00 HAMAD 2014,00 NO CAIRO,00 OMARA 2015,[lsc]: Included,[lsc]: eligibility (snowbolling),zz.ACM2018.01.20,zz.IEEE2018.01.20,zz.ML to SLR in CS - 2018.01.20,zz.SCOPUS2018.01.20},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

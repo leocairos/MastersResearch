@@ -1,0 +1,546 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Masters Research</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+function toggleInfo(articleid,info) {
+
+	var entry = document.getElementById(articleid);
+	var abs = document.getElementById('abs_'+articleid);
+	
+	if (abs && info == 'abstract') {
+		abs.className.indexOf('noshow') == -1?abs.className = 'abstract noshow':abs.className = 'abstract show';
+	} else { 
+		return;
+	}
+
+	// check if one or the other is available
+	var absshow; 
+	(abs && abs.className.indexOf('noshow') == -1)? absshow = true: absshow = false;
+	
+	// highlight original entry
+	if(entry) {
+		if (revshow || absshow || bibshow) {
+		entry.className = 'entry highlight show';
+		} else {
+		entry.className = 'entry show';
+		}
+	}
+	
+	// When there's a combination of abstract/review/bibtex showing, need to add class for correct styling
+	if(absshow) {
+		(revshow||bibshow)?abs.className = 'abstract nextshow':abs.className = 'abstract';
+	} 
+	
+}
+
+-->
+</script>
+<style type="text/css">
+body { background-color: white; font-family: Arial, sans-serif; font-size: 13px; line-height: 1.2; padding: 1em; color: #2E2E2E; margin: auto 2em; }
+
+table { width: 100%; empty-cells: show; border-spacing: 0em 0.2em; margin: 1em 0em; border-style: none; }
+th, td { border: 1px gray solid; border-width: 1px 1px; padding: 0.5em; vertical-align: top; text-align: left; }
+th { background-color: #efefef; }
+td + td, th + th { border-left: none; }
+
+td a { color: navy; text-decoration: none; }
+td a:hover  { text-decoration: underline; }
+
+tr.noshow { display: none;}
+tr.highlight td { background-color: #EFEFEF; border-top: 2px #2E2E2E solid; font-weight: bold; }
+tr.abstract td, tr.review td, tr.bibtex td { background-color: #EFEFEF; text-align: justify; border-bottom: 2px #2E2E2E solid; }
+tr.nextshow td { border-bottom: 1px gray solid; }
+
+p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
+
+@media print {
+	p.infolinks, #qs_settings, #quicksearch, t.bibtex { display: none !important; }
+	tr { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<center><h3>Included Studies</h3></center>
+<table id="qs_table" border="1">
+<thead><tr><th width="3%">Study</th><th width="25%">Author</th><th width="35%">Title</th><th width="4%">Year</th><th width="20%">Journal/Proceedings</th><th width="15%">Source Repository</th></tr></thead>
+
+<tbody>
+
+<tr id="Felizardo2010" class="entry">
+	<td> S1 </td>
+	<td>Felizardo, K.R., Nakagawa, E.Y., Feitosa, D., Minghim, R., Maldonado, J.C., Josbackslash&amp;233 and Maldonado, C.</td>
+	<td>An Approach Based on Visual Text Mining to Support Categorization and Classification in the Systematic Sapping <p class="infolinks">[<a href="javascript:toggleInfo('Felizardo2010','abstract')">Abstract / Questions</a>] </p></td>
+	<td>2010</td>
+	<td>Proceedings of the 14th international conference on Evaluation and Assessment in Software Engineering, EASE 2010, pp. 1-10&nbsp;</td>
+	<td>ACM</td>	
+</tr>
+<tr id="abs_Felizardo2010" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: Systematic mapping provides an overview of a research area to assess the quantity of evidence existing on a topic of interest. In spite of its relevance, the establishment of consistent categories and classification of primary studies in these categories are manually conducted. Objective: We propose an approach, named SM-VTM (Systematic Mapping based on Visual Text Mining), to support categorization and classification stages in the systematic mapping using Visual Text Mining (VTM), aiming at reducing time and effort required in this process. Method: We established SM-VTM, selected a VTM tool and conducted a case study comparing results of two systematic mappings: one performed manually and another using our approach. Results: The results of both systematic mappings were very similar, showing the viability of SM-VTM. Furthermore, since our approach was applied using a tool, reduction of time and effort can be achieved. Conclusions: The application of VTM seems to be very relevant in the context of systematic mapping.
+	<pre><p><b>Research Questions</b>:
+<b>RQ1:</b> SM-VTM (Systematic Mapping based on Visual Text Mining),
+<b>RQ2:</b> CASE STUDY - In order to demonstrate the use of our approach, a systematic mapping published recently in the literature (Afzal et al., 2008) is used. 
+<b>RQ3:</b> The results obtained by them were only compared to ours at the end of our study. The study of Afzal et al. (2008) will be named as Study 1 and ours as Study 2.; 
+we believe there is enough evidence for the reduction of effort and time in order to conduct categorization and classification activities in systematic mapping 
+if compared with manual conduction.; quantitative comparison; comparing the manual selection (Original Revision) with the revision using the technique. 
+Table 1 - Comparative results between studies 1 and 2
+<b>RQ4:</b> to support categorization and classification of primary studies during the systematic mapping process.
+
+QC1: Pesquisa com proposta e estudo de caso
+QC2: Sim, capitulo 4
+QC3: Sim, com a SLR manual
+QC4: Não, resultados são indicativos de possivel redução de esforço e tempo
+	</pre>
+	</td>
+</tr>
+
+
+<tr id="Felizardo201177" class="entry">
+	<td> S2 </td>
+	<td>Felizardo, K.R., Salleh, N., Martins, R.M., Mendes, E., MacDonell, S.G. and Maldonado, J.C.</td>
+	<td>Using Visual Text Mining to Support the Study Selection Activity in Systematic Literature Reviews <p class="infolinks">[<a href="javascript:toggleInfo('Felizardo201177','abstract')">Abstract / Questions</a>]</p></td>
+	<td>2011</td>
+	<td>2011 International Symposium on Empirical Software Engineering and Measurement, pp. 77-86&nbsp;</td>
+	<td>ACM / IEEE / SCOPUS</td>
+</tr>
+<tr id="abs_Felizardo201177" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: Background: A systematic literature review (SLR) is a methodology used to aggregate all relevant existing evidence to answer a research question of interest. Although crucial, the process used to select primary studies can be arduous, time consuming, and must often be conducted manually. Objective: We propose a novel approach, known as 'Systematic Literature Review based on Visual Text Mining' or simply SLR-VTM, to support the primary study selection activity using visual text mining (VTM) techniques. Method: We conducted a case study to compare the performance and effectiveness of four doctoral students in selecting primary studies manually and using the SLR-VTM approach. To enable the comparison, we also developed a VTM tool that implemented our approach. We hypothesized that students using SLR-VTM would present improved selection performance and effectiveness. Results: Our results show that incorporating VTM in the SLR study selection activity reduced the time spent in this activity and also increased the number of studies correctly included. Conclusions: Our pilot case study presents promising results suggesting that the use of VTM may indeed be beneficial during the study selection activity when performing an SLR.
+	<pre><p><b>Research Questions</b>:
+<b>RQ1:</b> Systematic Literature Review based on Visual Text Mining’ or simply SLR-VTM 
+<b>RQ2:</b> a case study to compare the performance and effectiveness of four doctoral students in selecting primary studies manually and using the SLR-VTM approach; 
+Previous findings reported by Malheiros et al. [10] show that the use of VTM reduces the time taken to perform the selection activity and also improves the 
+number of papers correctly included or excluded in SLRs. 
+<b>RQ3:</b> time taken - of the study selection activity in the SLR process?; effectiveness - of the study selection activity in the SLR process?; Table 1
+Our results showed that the time taken by students 1 and 2 to perform the study selection activity on the basis of reading the abstracts was 85 and 54 minutes respectively; 
+and the time taken by students 3 and 4 to perform the same activity using the VTM approach was 30 and 58 minutes respectively. The performance of the students using 
+the VTM appeared to be either equivalent to or better than that of the students using the manual method.
+<b>RQ4:</b> to support the primary study selection activity
+
+QC1: Pesquisa com proposta e estudo de caso
+QC2: Sim, capitulo 4
+QC3: sim, dois grupos de estudantes
+QC4: reduced the time spent in this activity and also increased the number of studies correctly included.
+	</pre>
+	</td>
+</tr>
+
+
+<tr id="Felizardo20121079" class="entry">
+	<td> S3 </td>
+	<td>Felizardo, K.R., Andery, G.F., Paulovich, F.V., Minghim, R., Maldonado, J.C., Josbackslash&amp;233 and Maldonado, C.</td>
+	<td>A visual analysis approach to validate the selection review of primary studies in systematic reviews <p class="infolinks">[<a href="javascript:toggleInfo('Felizardo20121079','abstract')">Abstract / Questions</a>]</p></td>
+	<td>2012</td>
+	<td>Information and Software Technology<br/>Vol. 54(10), pp. 1079-1091&nbsp;</td>
+	<td>ACM / SCOPUS</td>
+</tr>
+<tr id="abs_Felizardo20121079" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: Context: Systematic Literature Reviews (SLRs) are an important component to identify and aggregate research evidence from different empirical studies. Despite its relevance, most of the process is conducted manually, implying additional effort when the Selection Review task is performed and leading to reading all studies under analysis more than once. Objective: We propose an approach based on Visual Text Mining (VTM) techniques to assist the Selection Review task in SLR. It is implemented into a VTM tool (Revis), which is freely available for use. Method: We have selected and implemented appropriate visualization techniques into our approach and validated and demonstrated its usefulness in performing real SLRs. Results: The results have shown that employment of VTM techniques can successfully assist in the Selection Review task, speeding up the entire SLR process in comparison to the conventional approach. Conclusion: VTM techniques are valuable tools to be used in the context of selecting studies in the SLR process, prone to speed up some stages of SLRs. textcopyright 2012 Elsevier B.V. All rights reserved.
+	<pre><p><b>Research Questions</b>:
+<b>RQ1:</b>approach based on Visual Text Mining (VTM) techniques
+<b>RQ2:</b> validated and demonstrated its usefulness in performing real SLRs; 
+speeding up the entire SLR process in comparison to the conventional approach; 
+The examples are given using 4 different real SLRs, numbered 1, 2, 3 and 4, containing papers (primary studies) of the software testing domain; 
+Case study conduction The four subjects were split randomly into two groups of two students, one to conduct the selection review activity manually (group 1) 
+and another to conduct it using the VTM approach (group 2).
+<b>RQ3:</b> time spend; Accuracy (studies included as oracle); Table 2
+<b>RQ4:</b> We propose an approach to supporting the Selection Review task
+of primary studies in the SLR process (see Fig. 2)
+
+QC1: Pesquisa com proposta e estudo de caso
+QC2: Sim, em diversos trechos do estudo e com maior enfase no capitulo 3
+QC3: 4 SLRs sendo reproduzidas 4 estudantes divididos em 2 grupos
+QC4: Sim, table 2 e seção 4.2.2
+	</pre>
+	</td>
+</tr>
+
+<tr id="Felizardo2014" class="entry">
+	<td> S4 </td>
+	<td>Felizardo, K.R., Nakagawa, E.Y., MacDonell, S.G., Maldonado, J.C., Josbackslash&amp;233 and Maldonado, C.</td>
+	<td>A visual analysis approach to update systematic reviews <p class="infolinks">[<a href="javascript:toggleInfo('Felizardo2014','abstract')">Abstract / Questions</a>]</p></td>
+	<td>2014</td>
+	<td>Proceedings of the 18th International Conference on Evaluation and Assessment in Software Engineering - EASE '14, pp. 1-10&nbsp;</td>
+	<td>ACM / SCOPUS</td>	
+</tr>
+<tr id="abs_Felizardo2014" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: In order to preserve the value of Systematic Reviews (SRs), they should be frequently updated considering new evidence that has been produced since the completion of the previous version of the reviews. However, the update of an SR is a time consuming, manual task. Thus, many SRs have not been updated as they should be and, therefore, they are currently outdated. Objective: The main contribution of this paper is to support the update of SRs. Method: We propose USR-VTM, an approach based on Visual Text Mining (VTM) techniques, to support selection of new evidence in the form of primary studies. We then present a tool, named Revis, which supports our approach. Finally, we evaluate our approach through a comparison of outcomes achieved using USR-VTM versus the traditional (manual) approach. Results: Our results show that USR-VTM increases the number of studies correctly included compared to the traditional approach. Conclusions: USR-VTM effectively supports the update of SRs.
+	<pre><p><b>Research Questions</b>:
+<b>RQ1:</b>USR-VTM, an approach based on Visual Text Mining (VTM) techniques; by applying KNN (K-Nearest Neighbor) Edges Connec- tion technique [1] (see Figure 3(b)).
+<b>RQ2:</b> we evaluate our approach through a comparison of outcomes achieved using USR-VTM versus the traditional (manual) approach; 
+The subjects involved in this study were 12 graduate students (10 PhD and 2 Master’s students) of an SE course at University of S˜ao Paulo, Brazil.; 
+The subjects were split into two groups, each one contain- ing 5 PhD students and 1 Master student, both with prior experience in conducting SRs; 
+Group 1– conduct the selection activity using the traditional approach; and Group 2– conduct the selection activity with VTM support,
+<b>RQ3:</b> Table 1 summarizes the results of our experiment.; time spent; Correctly Included; Correctly Excluded; Total Correctly Classified (%); 
+Incorrectly Included; Incorrectly Excluded; Total Incorrectly Classified
+<b>RQ4:</b> to support selection of new evidence in the form of primary studies.
+
+QC1: Pesquisa com proposta e estudo de caso
+QC2: Sim
+QC3: Sim, dois grupos de estudantes
+QC4: Sim, table 1
+	</pre></td>
+</tr>
+
+
+<tr id="Feng2017311" class="entry">
+	<td> S5 </td>
+	<td>Feng, L., Chiam, Y.K., Abdullah, E., Obaidellah, U.H.,</td>
+	<td>Using Suffix Tree Clustering Method To Support The Planning Phase Of Systematic Literature Review . pp 311 - 332 <p class="infolinks">[<a href="javascript:toggleInfo('Feng2017311','abstract')">Abstract / Questions</a>]</p></td>
+	<td>2017</td>
+	<td>Malaysian Journal of Computer Science<br/>Vol. 30(4), pp. 311-332&nbsp;</td>
+	<td>SCOPUS</td>	
+</tr>
+<tr id="abs_Feng2017311" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: Systematic Literature Review (SLR) is an information-based process throughout which each stage must be carefully and systematically designed in planning phase. Important decisions need to be made about the various choices involved in the SLR planning phase. However, due to the necessarily comprehensive and rigorous nature of SLR, many researchers have difficulties in planning SLRs sufficiently and effectively. In recent decades, the use of text mining (TM) techniques has been introduced to facilitate SLR process, especially at conducting review phase to support the searching and selection of studies. However, so far, TM techniques have not been applied to support any activities during SLR planning phase. In this research, we proposed a method that apply Suffix Tree Clustering (STC) method to support decision-making activities within the SLR planning phase. This method also known as SLR Planning Based on Suffix Tree Clustering (SLRP-STC) method. It aims to help reviewers in three ways: 1) to extract research topics easily; 2) to better interpret extracted information; and 3) to quickly realize and refine a proposed search string that is poorly formulated or inappropriate. A case study was conducted by comparing the proposed method with manual approach. It is observed that the use of SLRP-STC method can improve the planning of SLR.
+	<pre><p><b>Research Questions</b>:
+<b>RQ1:</b>a new method, SLRP-STC (Systematic Literature Review Planning Based On Suffix Tree Clustering) method; 
+It can be viewed as a dynamic VTM (Visual Text Mining) method that combines document clustering and information retrieval techniques
+<b>RQ2:</b> o evaluate our approach, we have conducted a case study to compare the use of SLRP-STC method with the traditional, 
+manual approach in planning a SLR; The average score of user acceptance for SLRP-STC method. 
+Estudo de caso com 4 participantes que são estudandes de pos graduação com experiencia na execução de SLR.
+<b>RQ3:</b> The total time taken to plan the SLR; The average score of the quality of SLRP planning result.
+Table 6 - 87 minutes in manual; 75 minutes in SLRP-STC; Table 7 - 17.5 in Manual; 25 in SLRP-STC
+<b>RQ4:</b> o support effective knowledge acquisition and knowledge discovery process involved in SLR planning phase 
+
+QC1: Pesquisa com estudo de caso e resultados
+QC2: Sim
+QC3: Sim, 4 participantes dividos em 2 grupos
+QC4: Sim
+	</pre></td>
+</tr>
+
+
+<tr id="Garces201791" class="entry">
+	<td> S6 </td>
+	<td>Garc&eacute;s, L., Felizardo, K., Oliveira, L. and Nakagawa, E.</td>
+	<td>An Experience Report on Update of Systematic Literature Reviews <p class="infolinks">[<a href="javascript:toggleInfo('Garces201791','abstract')">Abstract / Questions</a>]</p></td>
+	<td>2017</td>
+	<td>Proceedings of the International Conference on Software Engineering and Knowledge Engineering, SEKE, pp. 91-96&nbsp;</td>
+	<td>SCOPUS</td>
+</tr>
+<tr id="abs_Garces201791" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: Context: In order to preserve the value of Systematic Literature Reviews (SLRs), they should be frequently updated including new studies produced after the conduction of the reviews. However, most of SLRs are outdated and there is a lack of works that support the conduction of SLRs updates. Objective: The main goal of this paper is to report our experience in updating two of our SLRs. Method: To update these two SLRs, we used automated techniques based on VTM (Visual Text Mining) to guarantee the presence of relevant studies. Results: From our experience, some factors to satisfactorily update SLRs were identified: (i) to adopt software tools to support the updating process; (ii) to provide as much as possible information of previous SLR; (iii) to involve researchers from previous SLR; and (iv) to reuse protocol from preliminar SLR. Conclusions: Reported lessons learned can be used as a basis of knowledge to guide researchers when updating their SLRs.
+	<pre><p><b>Research Questions</b>:
+<b>RQ1:</b> based on VTM (Visual Text Mining); Moreover, VTM has also been beneficial to update SLRs [4] and an approach, called USR–VTM, 
+was proposed and will be also explored in the context of this paper. Because of this, a summary of this approach is presented in next section.
+<b>RQ2:</b> an experiment to compare the outcomes achieved using this approach to the ones using traditional (manual) approach; updating two SLRs;
+<b>RQ3:</b> Qualitative, participants' opinion of the case study (interview)
+<b>RQ4:</b> to support the update of SLRs; The main advantage of USR–VTM is that the selection activity (classification of studies as included or excluded) 
+is based on previous knowledge.
+
+QC1: main goal of this paper is to report our experience in updating two of our SLRs
+QC2: Sim, no capitulo III
+QC3: Comparação com 2 SLRs (do mesmo autor)
+QC4: "showed that the use of USR-VTM approach can support and speed up the SLR updates. This work has helped us to understand the usefulness of 
+VTM techniques to support those updates..."
+	</pre></td>
+</tr>
+
+
+<tr id="Malheiros2007a" class="entry">
+	<td> S7 </td>
+	<td>Malheiros, V., Hohn, E., Pinho, R., Mendonca, M. and Maldonado, J.C.</td>
+	<td>A Visual Text Mining approach for Systematic Reviews <p class="infolinks">[<a href="javascript:toggleInfo('Malheiros2007a','abstract')">Abstract / Questions</a>] </p></td>
+	<td>2007</td>
+	<td>Proceedings of the First International Symposium on Empirical Software Engineering and Measurement, pp. 245-254&nbsp;</td>
+	<td>MANUAL</td>	
+</tr>
+<tr id="abs_Malheiros2007a" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: The software engineering research community has been adopting systematic reviews as an unbiased and fair way to assess a research topic. Despite encouraging early results, a systematic review process can be time consuming and hard to conduct. Thus, tools that help on its planning or execution are needed. This article suggests the use of visual text mining (VTM) to aid systematic reviews. A feasibility study was conducted comparing the proposed approach with a manual process. We observed that VTM can contribute to systematic review and we propose a new strategy called VTM-Based systematic review.
+	<pre><p><b>Research Questions</b>:
+<b>RQ1:</b> use of Visual Text Mining (VTM); vector space model (VSM); term frequency, inverse document frequency measure measure[11]; 
+the similarity of two documents is computed as the cosine distance of their vectors [12]; Normalized Compression Distance (NCD) [14]
+<b>RQ2:</b> Systematic review case study; A feasibil- ity study was conducted comparing the proposed approach with a manual process; 
+Researchers B and C applied the VTM tool for the selection of primary sources
+<b>RQ3:</b> effectiveness, reduction workload, efficiency, precion; 
+Considering the effectiveness of each researcher: (i) Researcher A, using manual review, chose 65% of the articles included in the oracle, 
+spending 3 hours of review; (ii) Researcher B, applying VTM, chose 55% of the total of included articles, spending 49 minutes of review. 
+In similar manner, Researcher C chose 57.5% of the total of included articles, spending 51 minutes of review.
+In respect to efficiency of the researches, considering efficiency as "chosen and included articles"/"review time", the results were: 
+Researcher A got 8.67 articles/hour using manual review; Researcher B and Researcher C, applying VTM, got 24.49 articles/hour and 23.53 articles/hour respectively.
+Researcher A had a precision of 83.87% while Researchers B and C had 81.28% and 92% respectively.
+<b>RQ4:</b> selection of studies
+
+QC1: Pesquisa com estudo de caso 
+QC2: Sim, coom detalhes de ferramenta, repositorio, perfil dos pesquisadores (A, B e C) e SLR replicada
+QC3: Sim, comparação entre manual (A) e com VTM (B e C)
+QC4: Sim, capitulo 6 e em RQ3
+	</pre></td>
+</tr>
+
+
+<tr id="Mergel2015" class="entry">
+	<td> S8 </td>
+	<td>Mergel, G.D., Silveira, M.S. and da Silva, T.S.</td>
+	<td>A method to support search string building in systematic literature reviews through visual text mining <p class="infolinks">[<a href="javascript:toggleInfo('Mergel2015','abstract')">Abstract / Questions</a>]</p></td>
+	<td>2015</td>
+	<td>Proceedings of the 30th Annual ACM Symposium on Applied Computing - SAC '15<br/>Vol. 13-17-Apri, pp. 1594-1601&nbsp;</td>
+	<td>ACM / SCOPUS</td>	
+</tr>
+<tr id="abs_Mergel2015" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: Despite the increasing popularity of systematic literature reviews in Software Engineering, several researchers still indicate it as a costly and challenging process. Aiming at alleviating this costly process, we propose an iterative method to support the process of building the search string for a systematic review. This method uses Visual Text Mining techniques to support the researcher by suggesting new terms for the string. In order to do so, the method extracts relevant terms from studies selected by the researcher and displays them in a way that facilitate their visualization and supports building and refining the search string. In order to check the feasibility of this approach, we developed a tool that implements the proposed method. Interviews with researchers identified their difficulties in performing systematic reviews and captured their feedback with regards the use of the proposed method in a user study. The researchers indicated that this approach could be used to improve the process of building the search strings for systematic reviews. The study indicates that our approach can be used to facilitate the construction of the systematic literature review search string. Copyright 2015 ACM.
+	<pre><p><b>Research Questions</b>:
+<b>RQ1:</b> Visual Text Mining, TF-IDF
+<b>RQ2:</b> Case study with interview experiment
+<b>RQ3:</b> Qualitative, opinion of case study participants
+<b>RQ4:</b> propose an iterative method to support the process of building the search string; Criação da String de Busca
+
+QC1: Pesquisa com estudo de caso/experimento
+QC2: Sim, capitulo 4.1 
+QC3: Razoavel, comparado entre 7 participantes do estudo
+QC4: Razoavel
+	</pre></td>
+</tr>
+
+
+<tr id="Ouhbi2016a" class="entry">
+	<td> S9 </td>
+	<td>Ouhbi, B., Kamoune, M., Frikh, B., Zemmouri, E.M. and Behja, H.</td>
+	<td>A hybrid feature selection rule measure and its application to systematic review <p class="infolinks">[<a href="javascript:toggleInfo('Ouhbi2016a','abstract')">Abstract / Questions</a>] </p></td>
+	<td>2016</td>
+	<td>Proceedings of the 18th International Conference on Information Integration and Web-based Applications and Services - iiWAS '16, pp. 106-114&nbsp;</td>
+	<td>ACM / SCOPUS</td>	
+</tr>
+<tr id="abs_Ouhbi2016a" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: Systematic review is the scientific process that provides reliable answers to a particular research question. There is a significant shift from using manual human approach to decision support tools that provides a semi-automated screening phase by reducing the required time and effort. Text classification is useful in determining the statistical significance level of association rules to reduce workload in the systematic review. Several approaches to generate a Rule set for rule based classifiers were proposed in the literature. In this paper, we show that statistic as well as semantic measures of a rule can be combined and effectively computed as a hybrid feature selection rule measure (HFSRM). Moreover, we propose a new algorithm called Rules7-hybrid feature selection (Rules7-HFSRM) by combining the classical algorithm Rules7 and the HFSRM and then used it on the systematic review problem. Our results show that our algorithm significantly outperforms the state-of-the-art benchmark algorithms in the systematic review context.
+	<pre><p><b>Research Questions</b>:
+<b>RQ1:</b> Rules7-hybrid feature selection (Rules7-HFSRM), that combine the classical algorithm Rules7 and the HFSRM.
+<b>RQ2:</b> In this study we used a corpus collected by Sellak et al. [1] based on a manual systematic review.
+<b>RQ3:</b> Precision, Recall, F-Score; Table7 ( Precision 0,929 - Recall 0,929 - F-Score 0,929)
+<b>RQ4:</b> OUR METHODOLOGY - Text Classification is the task of predicting the class of a document under a predefined set of categories (classes).
+
+QC1: Pesquisa com estudo de caso experimental
+QC2: Sim, breve descrição em no capitlo 4
+QC3: Apenas a comparação com o trabalho manual
+QC4: Sim, tabela 7
+	</pre></td>
+</tr>
+
+<tr id="Piroi2015" class="entry">
+	<td> S10 </td>
+	<td>Piroi, F., Lipani, A., Lupu, M. and Hanbury, A.</td>
+	<td>DASyR(IR) - document analysis system for systematic reviews (in Information Retrieval) <p class="infolinks">[<a href="javascript:toggleInfo('Piroi2015','abstract')">Abstract / Questions</a>] </p></td>
+	<td>2015</td>
+	<td>2015 13th International Conference on Document Analysis and Recognition (ICDAR), pp. 591-595&nbsp;</td>
+	<td>ACM / IEEE / SCOPUS</td>
+</tr>
+<tr id="abs_Piroi2015" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: Creating systematic reviews is a painstaking task undertaken especially in domains where experimental results are the primary method to knowledge creation. For the review authors, analysing documents to extract relevant data is a demanding activity. To support the creation of systematic reviews, we have created DASyR-a semi-automatic document analysis system. DASyR is our solution to annotating published papers for the purpose of ontology population. For domains where dictionaries are not existing or inadequate, DASyR relies on a semi-automatic annotation bootstrapping method based on positional Random Indexing, followed by traditional Machine Learning algorithms to extend the annotation set. We provide an example of the method application to a subdomain of Computer Science, the Information Retrieval evaluation domain. The reliance of this domain on large scale experimental studies makes it a perfect domain to test on. We show the utility of DASyR through experimental results for different parameter values for the bootstrap procedure, evaluated in terms of annotator agreement, error rate, precision and recall.
+	<pre><p><b>Research Questions</b>:
+<b>RQ1:</b> classifying ... using SVM; ... using the contextual paradigm, implemented by decision trees; radial basis function kernel SVM (RBF-SVM); 
+implementation of the decision tree classifier C4.5
+<b>RQ2:</b> Case Study; Five experts added approximately 30 000 annotations at a speed of 4s/annotation on average. 
+Two ML approaches were then used to scale from 30k annotations to 27 million tokens.
+<b>RQ3:</b> Error rate (RBF-SVM 2.5%; DT: 7.1%), recall (77.8%; 94.2%) and precision (86.4%; 93.1%).
+<b>RQ4:</b> Selection and Extraction; DASyR has two parts (Figure 1): an information exploration and extraction ... and an automated information extraction component.
+
+QC1: Pesquisa com avaliação da ferramenta
+QC2: Sim, an example of the method application to a subdomain of Computer Science, the Information Retrieval evaluation domain
+QC3: Não identificado
+QC4: Relata o recall, precision e error rate da ferramenta
+	</pre></td>
+</tr>
+
+<tr id="Rizzo2017195" class="entry">
+	<td> S11 </td>
+	<td>Rizzo, G., Tomassetti, F., Vetr&ograve;, A., Ardito, L., Torchiano, M., Morisio, M. and Troncy, R.</td>
+	<td>Semantic enrichment for recommendation of primary studies in a systematic literature review <p class="infolinks">[<a href="javascript:toggleInfo('Rizzo2017195','abstract')">Abstract / Questions</a>] </p></td>
+	<td>2017</td>
+	<td>Digital Scholarship in the Humanities<br/>Vol. 32(1), pp. 195-208&nbsp;</td>
+	<td>SCOPUS</td>	
+</tr>
+<tr id="abs_Rizzo2017195" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: A Systematic Literature Review (SLR) identifies, evaluates, and synthesizes the literature available for a given topic. This generally requires a significant human workload and has subjectivity bias that could affect the results of such a review. Automated document classification can be a valuable tool for recommending the selection of studies. In this article, we propose an automated pre-selection approach based on text mining and semantic enrichment techniques. Each document is firstly processed by a named entity extractor. The DBpedia URIs coming from the entity linking process are used as external sources of information. Our system collects the bag of words of those sources and it adds them to the initial document. A Multinomial Naive Bayes classifier discriminates whether the enriched document belongs to the positive example set or not. We used an existing manually performed SLR as benchmark data set. We trained our system with different configurations of relevant documents and we tested the goodness of our approach with an empirical assessment. Results show a reduction of the manual workload of 18&#37; that a human researcher has to spend, while holding a remarkable 95&#37; of recall, important condition for the nature itself of SLRs. We measure the effect of the enrichment process to the precision of the classifier and we observed a gain up to 5&#37;.
+	<pre><p><b>Research Questions</b>:
+<b>RQ1:</b> we propose an automated pre-selection approach based on text mining and semantic enrichment techniques; 
+Text Mining and Semantic Enrichement; Multinomial Naive Bayes (MNB) classifier; TF-IDF; Bag of Words
+<b>RQ2:</b> used an existing manually performed SLR as benchmark data set
+<b>RQ3:</b> Reducion of the manual Workload; recall; precision; 18%; 95%: +5%
+<b>RQ4:</b> we propose an automated pre-selection approach based on text mining and semantic enrichment techniques.
+
+QC1: Pesquisa com experimento
+QC2: Sim, replicação de SLR
+QC3: Sim, com a SLR manual
+QC4: Sim, resultados claros e declarados
+	</pre></td>
+</tr>
+
+<tr id="Ros2017a" class="entry">
+	<td> S12 </td>
+	<td>Ros, R., Bjarnason, E. and Runeson, P.</td>
+	<td>A Machine Learning Approach for Semi-Automated Search and Selection in Literature Studies <p class="infolinks">[<a href="javascript:toggleInfo('Ros2017a','abstract')">Abstract / Questions</a>] </p></td>
+	<td>2017</td>
+	<td>Proceedings of the 21st International Conference on Evaluation and Assessment in Software Engineering - EASE'17, pp. 118-127&nbsp;</td>
+	<td>ACM / SCOPUS</td>
+</tr>
+<tr id="abs_Ros2017a" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: Background. Search and selection of primary studies in System-atic Literature Reviews (SLR) is labour intensive, and hard to repli-cate and update. Aims. We explore a machine learning approach to support semi-automated search and selection in SLRs to address these weaknesses. Method. We 1) train a classiier on an initial set of papers, 2) extend this set of papers by automated search and snowballing, 3) have the researcher validate the top paper, selected by the classiier, and 4) update the set of papers and iterate the process until a stopping criterion is met. Results. We demonstrate with a proof-of-concept tool that the proposed automated search and selection approach generates valid search strings and that the performance for subsets of primary studies can reduce the man-ual work by half. Conclusions. approach is promising and the demonstrated advantages include cost savings and replicability. next steps include further tool development and evaluate the approach on a complete SLR.
+	<pre><p><b>Research Questions</b>:
+<b>RQ1:</b> 4.1.1 SVM is support vector machines, using the LibSVM tool for implementation [5].;
+LR is logistic regression, using the Liblinear tool for implementation [12]; 
+LR-T learns models from terms and topics separately, this adds a regularization constant as another hyper-parameter.; 
+DT infers a decision tree with information gain as the splitting decision [26];
+<b>RQ2:</b> The process for semi-automated selection is evaluated in terms of the amount ofwork saved compared to performing a fully manual selection. 
+The data set for evaluation is from an ongoing SLR on continuous experimentation
+<b>RQ3:</b> Table 2; 
+Algorithm Accuracy Precision Recall F1-score 
+LR; 93.8% 45.7% 63.9% 0.533
+LR-T; 92.8% 41.1% 66.7% 0.509
+SVM; 93.7% 44.8% 60.2% 0.514
+DT; 92.1% 36.7% 56.5% 0.445
+Coin-flip; 54.5% 5.6% 50.0% 0.100
+<b>RQ4:</b> We propose a method for automating the search and selection phases of the SLR process
+
+QC1: Pesquisa com implementação e teste
+QC2: Sim em 4.2
+QC3: Sim, validado contra trabalhos originais
+QC4: Sim, table 2
+	</pre></td>
+</tr>
+
+<tr id="Rubio2016" class="entry">
+	<td> S13 </td>
+	<td>R&uacute;bio, T.R.P.M., Gulo, C.A.S.J.C., Rubio, T.T.R. and Gulo, C.A.S.J.C.</td>
+	<td>Enhancing academic literature review through relevance recommendation: Using bibliometric and text-based features for classification <p class="infolinks">[<a href="javascript:toggleInfo('Rubio2016','abstract')">Abstract / Questions</a>]</p></td>
+	<td>2016</td>
+	<td><br/>Vol. 2016-JulyIberian Conference on Information Systems and Technologies, CISTI, pp. 1-6&nbsp;</td>
+	<td>IEEE / SCOPUS</td>	
+</tr>
+<tr id="abs_Rubio2016" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: — The growing number of scientific publications and the availability of information in online repositories enable researchers to discover, analyze and maintain an updated state of the art bibliography. Indeed, few works explore this scenario in order to support researchers on the literature review step. Literature reviewing comprises a fundamental part of the scientific writing, in which publications are evaluated and selected by relevance. Different approaches for relevance are possible, whether a more qualitative (semantic) approach with text-based techniques either more quantitative (numerical) approaches that use article's metadata, such as bibliometric measures. Bibliometrics provide direct evidences of relevance and could represent good attributes for automatic classification. Our insight is that if a bibliometric-based cannot outperform text-based approaches, a hybrid model using both could benefit from it enhancing the classification performance (in terms of accuracy, precision and recall). In this paper we presented a novel approach, using Machine Learning (ML), namely the ID3 algorithm for a classification model that learn from specialist annotated data and recommend relevant papers for a specific research. Experiments showed good results on learning performance when using a hybrid approach, increasing testing performance in 12&#37;, achieving 89.05&#37; in accuracy when classifying a paper as relevant.
+	<pre><p><b>Research Questions</b>:
+<b>RQ1:</b> we followed a traditional DM (Data-Mining) methodology, also known as Knowledge Data Discovery (KDD); 
+selected algorithms, namely Decision Trees, Naive Bayes, KNN, ID3 and Rule Induction;
+<b>RQ2:</b> tested our model with a study- case of a realistic scenario; 
+classifying whether the papers are relevant or not for its own research domain and problem; 
+Machine Learning techniques can identify the patterns used by the researcher and try to recommend the relevant literature for 
+the researcher’s work by using this manually verified information; have prepared three experiments in order to compare the performance 
+of the classification using the strategy of [6](Experiment 1), our strategy (Experiment 2), and a hybrid strategy combining both (Experiment 3).
+<b>RQ3:</b> Accuracy (1), Precision (2) and Recall (3).
+76 a 89%; 38 a 87%; 50 a 82%
+<b>RQ4:</b> have presented a novel approach for recommending papers for literature review
+
+QC1: Pesquisa com experimento
+QC2: Sim, no capitulo 4
+QC3: Sim, realizou-se 3 experimentos distintos
+QC4: Sim, no capitulo 4 e reafirmado na conclusão.
+	</pre></td>
+</tr>
+
+<tr id="Sellak2015" class="entry">
+	<td> S14 </td>
+	<td>Sellak, H., Ouhbi, B. and Frikh, B.</td>
+	<td>Using rule-based classifiers in systematic reviews <p class="infolinks">[<a href="javascript:toggleInfo('Sellak2015','abstract')">Abstract / Questions</a>] </p></td>
+	<td>2015</td>
+	<td>Proceedings of the 17th International Conference on Information Integration and Web-based Applications &amp;Services - iiWAS '15, pp. 1-5&nbsp;</td>
+	<td>ACM /SCOPUS</td>
+</tr>
+<tr id="abs_Sellak2015" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: Systematic review is the scientific process that provides reliable answers to a particular research question by interpreting the current pertinent literature. There is a significant shift from using manual human approach to decision support tools that provides a semi-automated screening phase by reducing the required time and effort to the group of experts. Most of proposed works apply supervised Machine Learning (ML) algorithms to infer exclusion and inclusion rules by observing a human screener. Unless, these techniques holds very little promise in study identification phase, because the rate of excluding citations erroneously still unreasonable. In this paper, we contribute to this line of works by proposing an alternative approach, not yet tested in this domain based on semantic rule-based classifiers. This approach involved applying a novel Hybrid Feature Selection Method (HFSM) within a Class Association Rules (CARs) algorithm. Experiments are conducted on a corpus resulting from an actual systematic review. The obtained results show that our algorithm outperforms the existing algorithms in the literature.
+	<pre><p><b>Research Questions</b>:
+<b>RQ1:</b> Class Association Rules (CARs) algorithm; ameliorate version of the BACA (Bit-priori Association Classification Algorithm); 
+HFSM (Hybrid Feature Selection Method) .
+<b>RQ2:</b> Experimental Results - The corpus selected for this work is collected based on a systematic review manually conducted by this article authors’
+<b>RQ3:</b>Recall (r), Precisão(p), F; 80%, 92%, 86%
+<b>RQ4:</b>citations screening
+
+QC1: Pesquisa com proposta e experimento
+QC2: Uma breve descrição no capitulo 4
+QC3: Comparado apenas com SLR previa dos mesmos autores
+QC4: Resultados declarados em 4.3 com
+	</pre></td>
+</tr>
+
+<tr id="Tomassetti201131" class="entry">
+	<td> S15 </td>
+	<td>Tomassetti, F., Rizzo, G., Vetro, A., Ardito, L., Torchiano, M. and Morisio, M.</td>
+	<td>Linked data approach for selection process automation in systematic reviews <p class="infolinks">[<a href="javascript:toggleInfo('Tomassetti201131','abstract')">Abstract / Questions</a>] </p></td>
+	<td>2011</td>
+	<td>15th Annual Conference on Evaluation &amp; Assessment in Software Engineering (EASE 2011)<br/>Vol. 2011(1), pp. 31-35&nbsp;</td>
+	<td>IEEE</td>	
+</tr>
+<tr id="abs_Tomassetti201131" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: Background: a systematic review identifies, evaluates and synthesizes the available literature on a given topic using scientific and repeatable methodologies. The significant workload required and the subjectivity bias could affect results. Aim: semi-automate the selection process to reduce the amount of manual work needed and the consequent subjectivity bias. Method: extend and enrich the selection of primary studies using the existing technologies in the field of Linked Data and text mining. We define formally the selection process and we also develop a prototype that implements it. Finally, we conduct a case study that simulates the selection process of a systematic literature published in literature. Results: the process presented in this paper could reduce the work load of 20&#37; with respect to the work load needed in the fully manually selection, with a recall of 100&#37;. Conclusions: the extraction of knowledge from scientific studies through Linked Data and text mining techniques could be used in the selection phase of the systematic review process to reduce the work load and subjectivity bias.
+	<pre><p><b>Research Questions</b>:
+<b>RQ1:</b> Semantic Web and Text Mining (Linked Data Approach); processo supervisionado interativo; Naive Bayes
+<b>RQ2:</b> conduct a case study that simulates the selection process of a systematic literature published in literature
+<b>RQ3:</b> with a recall; reduce the work load; 100%; 20%
+<b>RQ4:</b> Seleção de estudos
+
+QC1: Pesquisa com experimento
+QC2: Breve e resumida
+QC3: SLR manual
+QC4: Sim, os percentuais de cada metrica
+	</pre></td>
+</tr>
+
+
+<tr id="Torres2013" class="entry">
+	<td> S16 </td>
+	<td>Torres, J.A.S., Cruzes, D.S. and Salvador, L.N.</td>
+	<td>Automatically locating results to support systematic reviews in software engineering <p class="infolinks">[<a href="javascript:toggleInfo('Torres2013','abstract')">Abstract / Questions</a>] </p></td>
+	<td>2013</td>
+	<td>CIbSE 2013: 16th Ibero-American Conference on Software Engineering - Memorias del 10th Workshop Latinoamericano Ingenieria de Software Experimental, ESELAW 2013(January), pp. 6-19&nbsp;</td>
+	<td>SCOPUS</td>
+</tr>
+<tr id="abs_Torres2013" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: Background: Systematic Reviews are extremely dependent on human effort and, therefore, costly and time consuming. Some authors in Software Engineering are starting to research the use of computer support to reduce human labor in some tasks of the process. Aim: Define a method for automatic location of sentences that describe the results in an unstructured scientific paper aiming to reduce the human effort. Method: Three sentence classification methods were analyzed and a new sentence classification method was proposed and tested with the same input set used in the other methods. Results: The method proposed in this work reached rates ranged between 60&#37; and 72&#37; of recall of the sentences describing results of the papers. Conclusions: The proximity between the recall rates found in automatic tests conducted with the proposed method and in a test with humans confirms the feasibility of this technique for automating part of the process.
+	<pre><p><b>Research Questions</b>:
+<b>RQ1:</b> Textum; algorithm was built based in text mining techniques associated with classification strategies; TF-IDF; TF-ISF; 
+Six algorithms were tested to select the heuristic to be utilized in our method: Nayve Bayes (NB); 
+Tree J 4.8 (TJ48), Decision Table (DT), Support Vector Machines (SVM), Nearest Neighbor (IBK) and Multilayer Perceptron algorithm (MP).
+<b>RQ2:</b> A feasibility study was developed; Three sentence classification methods were analyzed and a new sentence classification method 
+was proposed and tested with the same input set used in the other methods;
+<b>RQ3:</b> Precision e Recall; Table 2; a precision rate up to 56.5% and recall rate up to 60%
+<b>RQ4:</b> the results extraction activity
+
+QC1: Pesquisa com proposta e experimento
+QC2: Sim, capitulo 5
+QC3: Sim, estudos anteriores sobre o mesmo corpus
+QC4: Sim, table 2
+	</pre></td>
+</tr>
+
+
+<tr id="Yu2016" class="entry">
+	<td> S17 </td>
+	<td>Yu, Z., Kraft, N.A. and Menzies, T.</td>
+	<td>Finding Better Active Learners for Faster Literature Reviews <p class="infolinks">[<a href="javascript:toggleInfo('Yu2016','abstract')">Abstract / Questions</a>]</p></td>
+	<td>2016</td>
+	<td>arXiv.org&nbsp;</td>
+	<td>MANUAL</td>
+</tr>
+<tr id="abs_Yu2016" class="abstract noshow">
+	<td colspan="6"><b>Abstract</b>: Literature reviews can be time-consuming and tedious to complete. By cataloging and refactoring three state-of-the-art active learning techniques from evidence-based medicine and legal electronic discovery, this paper finds and implements FASTREAD, a faster technique for studying a large corpus of documents. This paper assesses FASTREAD using datasets generated from existing SE literature reviews (Hall, Wahono, Radjenovic, Kitchenham et al.). Compared to manual methods, FASTREAD lets researchers find 95&#37; relevant studies after reviewing an order of magnitude fewer papers. Compared to other state-of-the-art automatic methods, FASTREAD reviews 20-50&#37; fewer studies while finding same number of relevant primary studies in a systematic literature review.
+	<pre><p><b>Research Questions</b>:
+<b>RQ1:</b> FASTREAD; Support vector machines (SVM) are a well-known and widely used classification technique; 
+Active learning is a cost-aware machine learning algorithm where labels of training data can be acquired with certain costs; 
+TfidfVectorizer in scikit-learn is utilized for the above preprocessing and featurization steps. 
+Alternatives such as stemming, LDA [3], paragraph vectors [32] require further exploration and are scheduled in our future works. 
+All 32 treatments use the same classifier– linear SVM from scikit-learn;
+<b>RQ2:</b> three datasets are created reverse-engineering existing SLRs and being used in this study to simulate the process 
+of excluding irrelevant studies; Our datasets are generated using information in the original SLR literature. 
+Our candidate studies are retrieved by applying similar if not the same the search string from original SLR literature and search in IEEE Xplore;
+<b>RQ3:</b> The performance of each algorithm is thus evaluated by its recall vs. studies reviewed curve; 
+This performance metrics is suggested by [10, 11, 53] and best fits the objectives of excluding irrelevant studies problem; 
+Table 2: Scott-Knott analysis for number of studies reviewed/ work saved over sampling to reach 95% recall; 
+In general, active learning techniques can reduce cost in primary study selections with a sacrifice of(say 5%) recall; 
+Our results and estimations suggest that FASTREAD can save more than 40% ofthe effort 
+(associated with the primary selection study phase ofa literature review) while retrieving 95% ofthe “relevant” studies.
+<b>RQ4:</b> selection; to reduce the effort required to exclude primary studies;
+
+QC1: Pesquisa com proposta e experimento
+QC2: Sim, 
+QC3: Sim, com os originais (manual)
+QC4: Sim, no capitulo 5.
+	</pre></td>
+</tr>
+
+</tbody>
+</table>
+<footer>
+ <center>  <small>Created by <a href="http://rdlsc.com">RDLSC Masters Research</a> on 2018.</small> </center>
+</footer>
+</body>
+</html>
