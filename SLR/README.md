@@ -2,6 +2,8 @@ Systematic Literature Review files - Masters Research
 -----
 This folder contains the files of the SLR performed during academic master's project.
 
-Latest Versions:
+List of the Included Studies
+-----
 
-- On Github repo: [https://github.com/leocairos/MastersResearch](https://github.com/leocairos/MastersResearch).
+The following figure demonstrates the list of the include studies (avaliable in bibtex and HTML folder):
+![](https://github.com/leocairos/MastersResearch/blob/master/screenshots/included_studies.png?raw=yes)
